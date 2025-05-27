@@ -89,15 +89,3 @@ A **FloodTech** é uma **plataforma digital baseada em dados** que integra difer
 
 ---
 
-## 📂 Estrutura Prevista do Repositório
-
-Global Solution_FloodTech/
-├── mobile/ # Aplicativo React Native
-├── Dotnet/ # API REST em .NET
-├── Java/ # API REST em Spring Boot
-├── DataBase/ # Scripts e procedimentos Oracle
-├── IoT/ # Código dos dispositivos ESP32
-├── Devops/ # Arquivos Docker e CI/CD
-├── Complience/ # Diagramas, documentos, arquitetura TOGAF
-└── README.md
-
