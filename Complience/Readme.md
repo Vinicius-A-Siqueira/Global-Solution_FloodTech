@@ -83,9 +83,7 @@ Este documento apresenta a visão completa da arquitetura do sistema **FLOODTECH
 
 #### Dados
 
-- **Oracle DB**: Dados estruturados (usuários, ocorrências, registros).
-- **MongoDB**: Dados semiestruturados (logs, sensores, imagens).
-
+- **Oracle DB**: Dados estruturados (usuários, ocorrências, registros, logs, sensores, imagens).
 ---
 
 ## 🔷 4. Arquitetura de Tecnologia
@@ -108,7 +106,7 @@ Este documento apresenta a visão completa da arquitetura do sistema **FLOODTECH
 
 - Backend em contêineres Docker (Java + .NET).
 - Node-RED em Raspberry Pi ou nuvem (Heroku, AWS EC2).
-- Oracle DB e MongoDB em servidores Linux (VMs ou cloud).
+- Oracle DB servidores Linux (VMs ou cloud).
 - Sistemas operacionais: Ubuntu Server, Windows 11 (administração).
 
 ### 🛠️ Softwares Necessários por Perfil
