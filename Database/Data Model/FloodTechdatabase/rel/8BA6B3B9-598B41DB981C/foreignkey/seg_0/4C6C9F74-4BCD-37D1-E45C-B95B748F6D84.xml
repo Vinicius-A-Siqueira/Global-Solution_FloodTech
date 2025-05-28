@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="4C6C9F74-4BCD-37D1-E45C-B95B748F6D84" containerWithKeyObject="4AB74FF3-86CE-18F5-CD1D-D59FBF4193A1" localFKIndex="0070A12E-4B0D-A9D0-7017-36149FBADBF3" name="TBL_ROTA_SEGURA_TBL_LOCALIZACAO_FK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>CE7E8137-0E34-B989-0FC3-FDFDAE9577AB</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<referredTableLongName>TBL_LOCALIZACAO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>EC3E5CE8-D2C1-FBF8-E93B-F55426855EE6</referredTableID>
+<keyObject>A48E14CF-FBA4-1885-27B4-F84B2EBB6552</keyObject>
+<referredKeyID>A48E14CF-FBA4-1885-27B4-F84B2EBB6552</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_localizacao</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

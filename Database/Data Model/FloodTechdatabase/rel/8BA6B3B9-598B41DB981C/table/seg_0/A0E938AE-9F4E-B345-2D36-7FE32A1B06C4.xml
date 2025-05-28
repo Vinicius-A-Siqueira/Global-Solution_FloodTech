@@ -1,0 +1,124 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A0E938AE-9F4E-B345-2D36-7FE32A1B06C4" name="TBL_PERFIL">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>FE0437B1-E3D6-F9A3-4D8C-E61740328DB3</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_perfil" id="A022C9CB-A536-9832-EA2F-10AFFEE2467E">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>2B0CD0B6-3CD6-AB80-BE28-2BBE1A9E33D5</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TBL_USUARIO_id_usuario" id="45CE10FB-69A3-6FDC-C423-B336FFFC366B">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>4F0188EA-7B89-5995-82AF-6A1088D22D27</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="34B09B59-84D0-8069-9CAB-B22FC6616BB2" referredColumn="99C5AB71-06FF-00E5-B07C-F0BB75E310B8"/>
+</associations>
+</Column>
+<Column name="nome_completo" id="28E9820F-8367-25A7-D4FE-99A7F46AB11E">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>36BDDB7D-EF64-A623-87C8-C25BC1D1E85A</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="endereco" id="C4470F44-2EC1-FD93-77AD-E83596A71A3A">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>22844470-C096-6124-033B-BCAC3319B96D</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="telefone_pessoal" id="DDD88988-F6E0-45B8-5192-D8C5F1125F9C">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>330CFE44-991F-FF8D-AB8E-B242B28B00B4</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="telefone_emergencia" id="4D9F8004-2F78-6D25-E4B5-04C0F178C469">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>8308653E-A26E-C36A-1164-23AB4194086A</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="33EFE70B-96CE-9622-B428-B70A24F142FE" name="TBL_PERFIL_PK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>6E4B608C-ABA4-11AE-3D26-AA7C50F1ADAE</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A022C9CB-A536-9832-EA2F-10AFFEE2467E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0EB1F71F-0044-13C4-93F6-F3D7E3679DBB" name="TBL_PERFIL_id_usuario_UN">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>B1F09922-9BDC-977A-1E11-6C548853B046</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="45CE10FB-69A3-6FDC-C423-B336FFFC366B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EB94DE9A-F86D-2006-E3DE-0E532F25F5D7" name="TBL_PERFIL_TBL_USUARIO_FK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>95F145B0-471F-3584-8614-6DCBC3257B7C</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="45CE10FB-69A3-6FDC-C423-B336FFFC366B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

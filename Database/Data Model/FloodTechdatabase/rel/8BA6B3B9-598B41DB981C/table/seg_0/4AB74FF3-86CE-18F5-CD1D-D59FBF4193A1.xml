@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4AB74FF3-86CE-18F5-CD1D-D59FBF4193A1" name="TBL_ROTA_SEGURA">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>253DDC88-1343-3224-8D0B-65B5C4BD8BAE</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_rota" id="38C465F3-5F7B-1A44-127F-B161727B6962">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>0AD3D321-2F55-E304-FA8B-189BD4A9EC91</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tempo_estimado" id="D355F2D8-81B6-8C87-DEC7-4DC539A63E0F">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>5A6F474B-C4FD-EB7B-2E0E-D6EB54B38A79</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bloqueada" id="41E4E146-225F-39FB-6BAC-7346B23BF9A6">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<comment><![CDATA[[Permitir: 'S', 'N')]]></comment>
+<generatorID>33C0684A-4B8D-5213-814F-19534C219E84</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TBL_LOCALIZACAO_id_localizacao" id="6A3C1D45-62A9-6375-CF36-639A8D5326C5">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>492D8A31-C883-E03F-7B72-A10E2CD80852</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4C6C9F74-4BCD-37D1-E45C-B95B748F6D84" referredColumn="8C9648EF-9513-8E3E-FF6B-FB4C6F788679"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C96B1232-7334-A118-58BF-B4FEDFD3C244" name="TBL_ROTA_SEGURA_PK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>60AE8A22-9117-0272-DE91-53D69A42E508</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="38C465F3-5F7B-1A44-127F-B161727B6962"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0070A12E-4B0D-A9D0-7017-36149FBADBF3" name="TBL_ROTA_SEGURA_TBL_LOCALIZACAO_FK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>CE7E8137-0E34-B989-0FC3-FDFDAE9577AB</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6A3C1D45-62A9-6375-CF36-639A8D5326C5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

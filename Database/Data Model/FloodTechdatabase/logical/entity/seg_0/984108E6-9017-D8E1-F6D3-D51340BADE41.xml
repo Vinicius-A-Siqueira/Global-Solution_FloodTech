@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="984108E6-9017-D8E1-F6D3-D51340BADE41" name="TBL_IMAGEM_SENSOR">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 12:14:40 UTC</createdTime>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_imagem" id="229B3310-73EB-6E67-4883-C5A8D9C625E1">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 12:14:50 UTC</createdTime>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_hora" id="01056F13-FC63-0CB0-8C67-21D6F044FB82">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 12:15:01 UTC</createdTime>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="url_armazenada" id="A790C6F8-3E73-9059-37B2-2778885508AF">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 12:15:09 UTC</createdTime>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_sensor" id="6B853D18-9E7A-50DA-C8A7-5D6396A45F55">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:12:16 UTC</createdTime>
+<generatorID>FA7822B3-F273-1E8B-F1E6-CDB1D5A2DECB</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<referedAttribute>303CFD75-42A1-7C00-4C85-81A682C7F991</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F1BE813C-BABF-F503-2D1D-C6D50C63A1DE" name="TBL_IMAGEM_SENSOR PK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 12:15:30 UTC</createdTime>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>229B3310-73EB-6E67-4883-C5A8D9C625E1</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

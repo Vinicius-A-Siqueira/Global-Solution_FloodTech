@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="83C84EBD-0F5A-31FA-EF62-38AD68768B25" containerWithKeyObject="C24BB7ED-EEA8-EA33-2B41-A5CA5807A558" localFKIndex="4A999436-7A00-5482-8C82-EA1A730407D9" name="TBL_LEITURA_SENSOR_TBL_SENSOR_IOT_FK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>C9C67371-FD01-99BC-B489-8687549D31AB</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<referredTableLongName>TBL_SENSOR_IOT</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>C644623B-6F21-FEF8-EFFC-41EEE2B5181E</referredTableID>
+<keyObject>BCC2C263-C720-53C3-6333-877255F3D62D</keyObject>
+<referredKeyID>BCC2C263-C720-53C3-6333-877255F3D62D</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_sensor</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C644623B-6F21-FEF8-EFFC-41EEE2B5181E" name="TBL_SENSOR_IOT">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>7FDE9971-CE27-0489-3616-D438F3A58FFD</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_sensor" id="B6DD4B58-AA30-1E7A-C56B-9F13253C1104">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>303CFD75-42A1-7C00-4C85-81A682C7F991</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipo_sensor" id="61BE5716-817C-AF54-B50A-16AC43BE7234">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<comment><![CDATA[[Permitido:'UMIDADE', 'NIVEL', 'IMAGEM']]]></comment>
+<generatorID>718B9AA4-B98D-8A01-3661-5066914B39DB</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="modelo" id="D340A941-81CB-3134-3682-16B1942FB3C9">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>25E1CC4A-16A5-230F-6254-B18765ADBEFF</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="localizacao" id="338C0E32-1F00-E18A-F4EB-46E11768EB8D">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>AFE13FBC-92D2-7BE7-3AAE-7BDD803764E4</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TBL_LOCALIZACAO_id_localizacao" id="7E103F44-AA6D-421A-BA94-488BB044F510">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>F5A318DD-40BC-8B73-CF58-B2A2B0181680</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CCC6A83C-F3F7-9BC0-A55D-7F837867E922" referredColumn="8C9648EF-9513-8E3E-FF6B-FB4C6F788679"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BCC2C263-C720-53C3-6333-877255F3D62D" name="TBL_SENSOR_IOT_PK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>0C34AAA3-F3C7-703E-D53D-BAE621017741</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B6DD4B58-AA30-1E7A-C56B-9F13253C1104"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4A5F9E83-C718-DBAE-A3B6-A27A6177E1BA" name="TBL_SENSOR_IOT_TBL_LOCALIZACAO_FK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>3A80F800-0E36-B3A3-F2A9-FFC4B04084FB</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7E103F44-AA6D-421A-BA94-488BB044F510"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

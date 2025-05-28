@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_18" directorySegmentName="seg_0" id="FA7822B3-F273-1E8B-F1E6-CDB1D5A2DECB">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:12:16 UTC</createdTime>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<sourcePk>0C34AAA3-F3C7-703E-D53D-BAE621017741</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>7FDE9971-CE27-0489-3616-D438F3A58FFD</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>984108E6-9017-D8E1-F6D3-D51340BADE41</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

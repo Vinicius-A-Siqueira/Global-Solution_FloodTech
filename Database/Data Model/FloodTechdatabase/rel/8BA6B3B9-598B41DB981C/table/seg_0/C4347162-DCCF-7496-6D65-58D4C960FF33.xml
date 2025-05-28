@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C4347162-DCCF-7496-6D65-58D4C960FF33" name="TBL_IMAGEM_SENSOR">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>984108E6-9017-D8E1-F6D3-D51340BADE41</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_imagem" id="72B7C0FA-475C-E387-E60A-1F8E3AD83B7D">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>229B3310-73EB-6E67-4883-C5A8D9C625E1</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_hora" id="29DEF939-8305-B6DE-21AF-8324228A2A53">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>01056F13-FC63-0CB0-8C67-21D6F044FB82</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="url_armazenada" id="8E1AE1D5-37BC-3782-9BE9-ECE393CA4529">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>A790C6F8-3E73-9059-37B2-2778885508AF</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TBL_SENSOR_IOT_id_sensor" id="5EE4F63E-12BD-94EF-7BC2-158339D32E5D">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>6B853D18-9E7A-50DA-C8A7-5D6396A45F55</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6CABF556-22FB-5B55-B2D1-49C7EB9E9404" referredColumn="B6DD4B58-AA30-1E7A-C56B-9F13253C1104"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EBCD99B5-145F-616A-AD38-B57AE904990D" name="TBL_IMAGEM_SENSOR_PK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>F1BE813C-BABF-F503-2D1D-C6D50C63A1DE</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="72B7C0FA-475C-E387-E60A-1F8E3AD83B7D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E8E80267-4E86-7752-D0F1-9554E89C9FA3" name="TBL_IMAGEM_SENSOR_TBL_SENSOR_IOT_FK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>FA7822B3-F273-1E8B-F1E6-CDB1D5A2DECB</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5EE4F63E-12BD-94EF-7BC2-158339D32E5D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

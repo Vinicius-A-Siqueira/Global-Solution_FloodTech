@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7FDE9971-CE27-0489-3616-D438F3A58FFD" name="TBL_SENSOR_IOT">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 12:09:34 UTC</createdTime>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_sensor" id="303CFD75-42A1-7C00-4C85-81A682C7F991">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 12:09:37 UTC</createdTime>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo_sensor" id="718B9AA4-B98D-8A01-3661-5066914B39DB">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 12:10:00 UTC</createdTime>
+<comment><![CDATA[[Permitido:'UMIDADE', 'NIVEL', 'IMAGEM']]]></comment>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="modelo" id="25E1CC4A-16A5-230F-6254-B18765ADBEFF">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 12:10:12 UTC</createdTime>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="localizacao" id="AFE13FBC-92D2-7BE7-3AAE-7BDD803764E4">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 12:10:39 UTC</createdTime>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_localizacao" id="F5A318DD-40BC-8B73-CF58-B2A2B0181680">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 13:55:44 UTC</createdTime>
+<generatorID>3A80F800-0E36-B3A3-F2A9-FFC4B04084FB</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<referedAttribute>0BE0F65B-3F81-B3FD-6FCC-AFB4BE46A7FB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="0C34AAA3-F3C7-703E-D53D-BAE621017741" name="id_sensor PK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 12:09:39 UTC</createdTime>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>303CFD75-42A1-7C00-4C85-81A682C7F991</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

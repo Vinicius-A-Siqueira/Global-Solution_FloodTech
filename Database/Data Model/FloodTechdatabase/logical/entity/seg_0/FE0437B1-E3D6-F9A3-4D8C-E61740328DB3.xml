@@ -1,0 +1,125 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FE0437B1-E3D6-F9A3-4D8C-E61740328DB3" name="TBL_PERFIL">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 12:44:54 UTC</createdTime>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_perfil" id="2B0CD0B6-3CD6-AB80-BE28-2BBE1A9E33D5">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 12:48:42 UTC</createdTime>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_usuario" id="4F0188EA-7B89-5995-82AF-6A1088D22D27">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 12:50:39 UTC</createdTime>
+<generatorID>95F145B0-471F-3584-8614-6DCBC3257B7C</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<referedAttribute>23837EDC-B90F-FBE4-C676-BCC3F12CD5FD</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nome_completo" id="36BDDB7D-EF64-A623-87C8-C25BC1D1E85A">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 12:48:52 UTC</createdTime>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="endereco" id="22844470-C096-6124-033B-BCAC3319B96D">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 12:49:13 UTC</createdTime>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="telefone_pessoal" id="330CFE44-991F-FF8D-AB8E-B242B28B00B4">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 12:49:25 UTC</createdTime>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="telefone_emergencia" id="8308653E-A26E-C36A-1164-23AB4194086A">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 12:49:44 UTC</createdTime>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6E4B608C-ABA4-11AE-3D26-AA7C50F1ADAE" name="TBL_PERFIL PK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 12:48:50 UTC</createdTime>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2B0CD0B6-3CD6-AB80-BE28-2BBE1A9E33D5</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="B1F09922-9BDC-977A-1E11-6C548853B046" name="Key_2">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 13:58:33 UTC</createdTime>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<newElementsIDs>4F0188EA-7B89-5995-82AF-6A1088D22D27</newElementsIDs>
+<usedAttributes>
+<attributeRef>4F0188EA-7B89-5995-82AF-6A1088D22D27</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

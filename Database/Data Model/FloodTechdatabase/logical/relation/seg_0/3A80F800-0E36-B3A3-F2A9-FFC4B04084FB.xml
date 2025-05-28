@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Localizacao_Sensor_IoT" directorySegmentName="seg_0" id="3A80F800-0E36-B3A3-F2A9-FFC4B04084FB">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 13:55:44 UTC</createdTime>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<sourcePk>6B6BE5D7-E1C7-FB3E-8407-3777D19CAA21</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>0763B40C-509A-5D64-33DE-5E2041C18CC0</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>7FDE9971-CE27-0489-3616-D438F3A58FFD</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

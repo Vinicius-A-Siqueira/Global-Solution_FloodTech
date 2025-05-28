@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="34B09B59-84D0-8069-9CAB-B22FC6616BB2" containerWithKeyObject="A0E938AE-9F4E-B345-2D36-7FE32A1B06C4" localFKIndex="EB94DE9A-F86D-2006-E3DE-0E532F25F5D7" name="TBL_PERFIL_TBL_USUARIO_FK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 14:13:00 UTC</createdTime>
+<generatorID>95F145B0-471F-3584-8614-6DCBC3257B7C</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<referredTableLongName>TBL_USUARIO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>E8E9F41D-4FC0-E01C-ACCB-6E01398229D3</referredTableID>
+<keyObject>EA874063-007D-68E0-D461-2D5B558259D6</keyObject>
+<referredKeyID>EA874063-007D-68E0-D461-2D5B558259D6</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_usuario</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
