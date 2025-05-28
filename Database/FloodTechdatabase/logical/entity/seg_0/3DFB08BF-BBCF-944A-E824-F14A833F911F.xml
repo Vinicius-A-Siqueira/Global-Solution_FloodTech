@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3DFB08BF-BBCF-944A-E824-F14A833F911F" name="TBL_ALERTA">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 12:13:31 UTC</createdTime>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_alerta" id="821F0717-E379-279C-7636-2CDBEBCE8EBC">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 12:13:38 UTC</createdTime>
+<comment><![CDATA[
+]]></comment>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="mensagem" id="D3E12F27-A36F-229B-BD84-97BEA4D82AC7">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 12:13:48 UTC</createdTime>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_emissao" id="871BAB63-2C4F-FC45-5C75-BE50CC674C43">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 12:14:03 UTC</createdTime>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nivel_alerta	" id="0156C931-38FB-F062-6A9A-B1F45A8211EF">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 12:14:12 UTC</createdTime>
+<comment><![CDATA[[Permitido: 'BAIXO', 'MÉDIO', 'ALTO']]]></comment>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_usuario" id="EF1F6740-A4CF-2A7F-602E-B44BE1D13B9E">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 12:50:11 UTC</createdTime>
+<generatorID>15B1AF44-5BF2-F9AF-5322-85001E065912</generatorID>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<referedAttribute>23837EDC-B90F-FBE4-C676-BCC3F12CD5FD</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="BC3A2520-04AF-E387-155A-9371628C1141" name="TBL_ALERTA PK">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 12:14:30 UTC</createdTime>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<engineerTo>
+<item key="8BA6B3B9-F936-906F-78F0-598B41DB981C" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>821F0717-E379-279C-7636-2CDBEBCE8EBC</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

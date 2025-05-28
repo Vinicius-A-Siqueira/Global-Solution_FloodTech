@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="92CF1964-B7C2-D18B-9771-D670E6B86E8B" mainViewID="B2E96FBC-EEAF-A226-96E0-C2C930BCAE40">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 12:04:01 UTC</createdTime>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

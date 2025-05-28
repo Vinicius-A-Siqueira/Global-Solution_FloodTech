@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="FloodTechdatabase" id="D13F437A-88C7-6CF5-E242-E86291434BB8" version="3.5">
+<createdBy>labsfiap</createdBy>
+<createdTime>2025-05-28 12:04:01 UTC</createdTime>
+<ownerDesignName>FloodTechdatabase</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>D13F437A-88C7-6CF5-E242-E86291434BB8</designId>
+</OSDM_Design>
