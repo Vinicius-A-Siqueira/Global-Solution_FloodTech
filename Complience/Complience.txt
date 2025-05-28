@@ -1,0 +1,141 @@
+🔷 1. Visão de Arquitetura
+Stakeholders:
+
+Governo/Defesa Civil – interesse em monitoramento e resposta rápida.
+
+População afetada – usuários finais do app.
+
+Equipe técnica – desenvolvedores e mantenedores das APIs, banco de dados, IoT e mobile.
+
+ONGs e instituições de apoio – auxílio em zonas de risco.
+
+Parceiros de infraestrutura (cloud, telecom) – garantem conectividade e disponibilidade.
+
+Objetivos:
+
+Criar um sistema integrado para monitorar e responder rapidamente a desastres naturais.
+
+Fornecer alertas em tempo real à população.
+
+Mapear zonas de risco com dados IoT e imagens.
+
+Centralizar dados de sensores, previsões meteorológicas e status de infraestrutura.
+
+Requisitos:
+
+Sistema de alta disponibilidade e escalabilidade.
+
+APIs RESTful interoperáveis (Java e .NET).
+
+Integração com sensores IoT (ESP32 + Node-RED).
+
+App mobile multiplataforma (React Native).
+
+Armazenamento e análise de dados em Oracle + MongoDB.
+
+Comunicação segura e com autenticação (ex: JWT).
+
+Camadas de backend separadas por domínios (DDD).
+
+🔷 2. Arquitetura de Negócio 
+Atores:
+
+Cidadão
+
+Operador da Defesa Civil
+
+Administrador da Plataforma
+
+Equipe Técnica
+
+Parceiros externos
+
+Funções e papéis:
+
+Cidadão: consulta alertas, envia localização, acessa pontos de apoio.
+
+Operador: cadastra ocorrências, monitora sensores, atua em crises.
+
+Administrador: gerencia permissões, define zonas de risco.
+
+Técnicos: mantêm os sistemas e conectividade.
+
+Parceiros: fornecem dados externos e apoio logístico.
+
+Processos:
+
+Registro e verificação de incidentes (manuais ou automáticos via IoT).
+
+Emissão de alertas geolocalizados.
+
+Atualização do status de áreas afetadas.
+
+Consulta de rotas seguras e abrigos.
+
+Relatórios para planejamento e prevenção.
+
+🔷 3. Arquitetura de Sistemas 
+Camadas e componentes:
+
+Apresentação (Front-end)
+
+App React Native com Expo
+
+Portal Web (administração)
+
+Aplicação (Back-end)
+
+API em Java (Spring Boot): gerenciamento de usuários, alertas e sensores
+
+API em .NET 8: geolocalização, rotas e dados da infraestrutura
+
+Serviços (Integração e IoT)
+
+Node-RED para coleta de dados dos sensores ESP32
+
+Serviços de mensageria (MQTT ou HTTP)
+
+Serviço de mapa geoespacial (ex: Leaflet ou Mapbox)
+
+Dados
+
+Oracle: dados estruturados (usuários, ocorrências, registros)
+
+MongoDB: dados semiestruturados (logs, imagens, sensores)
+
+🔷 4. Arquitetura de Tecnologia 
+Conectividade e equipamentos:
+
+Rede Wi-Fi e 4G para dispositivos móveis.
+
+Rede local (LAN) para sensores e câmeras em áreas de risco.
+
+VPN entre APIs e bancos de dados.
+
+Acesso via HTTPS (TLS/SSL) com autenticação JWT.
+
+Devices de acesso:
+
+Smartphones (usuários e operadores)
+
+Notebooks (administração)
+
+Placas ESP32 com sensores DHT11/DHT22, GPS e câmeras
+
+Servidores e Software:
+
+Backend hospedado em contêineres Docker (Java e .NET)
+
+Node-RED rodando em uma Raspberry Pi ou em nuvem (ex: Heroku, AWS EC2)
+
+Oracle DB + MongoDB em servidor Linux (VM ou nuvem)
+
+Sistemas operacionais: Ubuntu Server, Windows 11 (admin)
+
+Softwares necessários por máquina:
+
+Desenvolvedores: VS Code, Docker, Node.js, Postman
+
+Servidores: Java 21, .NET SDK 8, Docker Engine, Node-RED
+
+Admins: Navegador atualizado, VPN Client, App Mobile
