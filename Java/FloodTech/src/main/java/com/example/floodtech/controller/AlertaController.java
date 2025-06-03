@@ -1,42 +1,46 @@
 package com.example.floodtech.controller;
 
-import com.example.floodtech.dto.AlertaDTO;
-import com.example.floodtech.model.Alerta;
-import com.example.floodtech.model.Usuario;
-import com.example.floodtech.model.Localizacao;
-import com.example.floodtech.repository.AlertaRepository;
-import com.example.floodtech.repository.UsuarioRepository;
-import com.example.floodtech.repository.LocalizacaoRepository;
+import com.example.floodtech.dto.*;
+import com.example.floodtech.service.*;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
-import org.modelmapper.ModelMapper;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import jakarta.validation.Valid;
+
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/alertas")
 @RequiredArgsConstructor
+@Tag(name = "Alertas")
+@SecurityRequirement(name = "bearerAuth")
 public class AlertaController {
-    private final AlertaRepository repo;
-    private final UsuarioRepository usuarioRepo;
-    private final LocalizacaoRepository localizacaoRepo;
-    private final ModelMapper mapper;
+    private final AlertaService service;
 
     @GetMapping
-    public List<AlertaDTO> getAll() {
-        return repo.findAll().stream().map(a -> {
-            AlertaDTO dto = mapper.map(a, AlertaDTO.class);
-            dto.setUsuarioId(a.getUsuario().getId());
-            dto.setLocalizacaoId(a.getLocalizacao().getId());
-            return dto;
-        }).toList();
+    public ResponseEntity<List<AlertaDTO>> listarTodos() {
+        return ResponseEntity.ok(service.listarTodos());
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<AlertaDTO> buscarPorId(@PathVariable Long id) {
+        return ResponseEntity.ok(service.buscarPorId(id));
     }
 
     @PostMapping
-    public AlertaDTO create(@RequestBody @Valid AlertaDTO dto) {
-        Alerta alerta = mapper.map(dto, Alerta.class);
-        alerta.setUsuario(usuarioRepo.findById(dto.getUsuarioId()).orElseThrow());
-        alerta.setLocalizacao(localizacaoRepo.findById(dto.getLocalizacaoId()).orElseThrow());
-        return mapper.map(repo.save(alerta), AlertaDTO.class);
+    public ResponseEntity<AlertaDTO> salvar(@RequestBody AlertaDTO dto) {
+        return ResponseEntity.ok(service.salvar(dto));
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<AlertaDTO> atualizar(@PathVariable Long id, @RequestBody AlertaDTO dto) {
+        return ResponseEntity.ok(service.atualizar(id, dto));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> excluir(@PathVariable Long id) {
+        service.excluir(id);
+        return ResponseEntity.noContent().build();
     }
 }

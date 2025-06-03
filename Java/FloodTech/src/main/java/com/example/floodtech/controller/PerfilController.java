@@ -1,38 +1,46 @@
 package com.example.floodtech.controller;
 
-import com.example.floodtech.dto.PerfilDTO;
-import com.example.floodtech.model.Perfil;
-import com.example.floodtech.model.Usuario;
-import com.example.floodtech.repository.PerfilRepository;
-import com.example.floodtech.repository.UsuarioRepository;
+import com.example.floodtech.dto.*;
+import com.example.floodtech.service.*;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
-import org.modelmapper.ModelMapper;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import jakarta.validation.Valid;
+
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/perfis")
 @RequiredArgsConstructor
+@Tag(name = "Perfis")
+@SecurityRequirement(name = "bearerAuth")
 public class PerfilController {
-    private final PerfilRepository repo;
-    private final UsuarioRepository usuarioRepo;
-    private final ModelMapper mapper;
+    private final PerfilService service;
 
     @GetMapping
-    public List<PerfilDTO> getAll() {
-        return repo.findAll().stream().map(p -> {
-            PerfilDTO dto = mapper.map(p, PerfilDTO.class);
-            dto.setUsuarioId(p.getUsuario().getId());
-            return dto;
-        }).toList();
+    public ResponseEntity<List<PerfilDTO>> listarTodos() {
+        return ResponseEntity.ok(service.listarTodos());
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<PerfilDTO> buscarPorId(@PathVariable Long id) {
+        return ResponseEntity.ok(service.buscarPorId(id));
     }
 
     @PostMapping
-    public PerfilDTO create(@RequestBody @Valid PerfilDTO dto) {
-        Perfil perfil = mapper.map(dto, Perfil.class);
-        Usuario user = usuarioRepo.findById(dto.getUsuarioId()).orElseThrow();
-        perfil.setUsuario(user);
-        return mapper.map(repo.save(perfil), PerfilDTO.class);
+    public ResponseEntity<PerfilDTO> salvar(@RequestBody PerfilDTO dto) {
+        return ResponseEntity.ok(service.salvar(dto));
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<PerfilDTO> atualizar(@PathVariable Long id, @RequestBody PerfilDTO dto) {
+        return ResponseEntity.ok(service.atualizar(id, dto));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> excluir(@PathVariable Long id) {
+        service.excluir(id);
+        return ResponseEntity.noContent().build();
     }
 }

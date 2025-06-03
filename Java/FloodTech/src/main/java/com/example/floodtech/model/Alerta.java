@@ -5,7 +5,7 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
 @Entity
-@Table(name = "tbl_alerta")
+@Table(name = "TBL_ALERTA")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -14,24 +14,25 @@ public class Alerta {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID_ALERTA")
     private Long id;
 
     @NotBlank
-    @Column(length = 300, nullable = false)
+    @Column(name = "MENSAGEM", length = 300, nullable = false)
     private String mensagem;
 
-    @Column(name = "data_emissao", nullable = false)
+    @Column(name = "DATA_EMISSAO", nullable = false)
     private java.time.LocalDate dataEmissao;
 
     @NotBlank
-    @Column(name = "nivel_alerta", nullable = false)
+    @Column(name = "NIVEL_ALERTA", length = 20, nullable = false)
     private String nivelAlerta;
 
     @ManyToOne
-    @JoinColumn(name = "tbl_usuario_id_usuario", nullable = false)
+    @JoinColumn(name = "TBL_USUARIO_ID_USUARIO", nullable = false)
     private Usuario usuario;
 
     @ManyToOne
-    @JoinColumn(name = "tbl_localizacao_id_localizacao", nullable = false)
+    @JoinColumn(name = "TBL_LOCALIZACAO_ID_LOCALIZACAO", nullable = false)
     private Localizacao localizacao;
 }

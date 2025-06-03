@@ -1,48 +1,72 @@
 package com.example.floodtech.service;
 
-import com.example.floodtech.dto.*;
-import com.example.floodtech.model.*;
-import com.example.floodtech.repository.*;
-import jakarta.persistence.EntityNotFoundException;
+import com.example.floodtech.dto.UsuarioDTO;
+import com.example.floodtech.model.Usuario;
+import com.example.floodtech.repository.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
-import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
 public class UsuarioService {
-    private final UsuarioRepository repository;
-    private final ModelMapper modelMapper;
+
+    private final UsuarioRepository usuarioRepository;
+
+    // Mapper: DTO -> Entidade
+    private Usuario mapperDtoParaEntidade(UsuarioDTO dto) {
+        return Usuario.builder()
+                .id(dto.getId())
+                .email(dto.getEmail())
+                .senha(dto.getSenha())
+                .tipoUsuario(dto.getTipoUsuario())
+                .build();
+    }
+
+    // Mapper: Entidade -> DTO
+    private UsuarioDTO mapperEntidadeParaDto(Usuario usuario) {
+        return UsuarioDTO.builder()
+                .id(usuario.getId())
+                .email(usuario.getEmail())
+                .senha(usuario.getSenha())
+                .tipoUsuario(usuario.getTipoUsuario())
+                .build();
+    }
 
     public List<UsuarioDTO> listarTodos() {
-        return repository.findAll()
-                .stream()
-                .map(usuario -> modelMapper.map(usuario, UsuarioDTO.class))
-                .collect(Collectors.toList());
+        List<Usuario> usuarios = usuarioRepository.findAll();
+        return usuarios.stream()
+                .map(this::mapperEntidadeParaDto)
+                .toList();
     }
 
     public UsuarioDTO buscarPorId(Long id) {
-        Usuario usuario = repository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("Usuário não encontrado"));
-        return modelMapper.map(usuario, UsuarioDTO.class);
+        Usuario usuario = usuarioRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
+        return mapperEntidadeParaDto(usuario);
     }
 
     public UsuarioDTO salvar(UsuarioDTO dto) {
-        Usuario entity = modelMapper.map(dto, Usuario.class);
-        return modelMapper.map(repository.save(entity), UsuarioDTO.class);
+        Usuario usuario = mapperDtoParaEntidade(dto);
+        usuario.setId(null); // para garantir insert e não update
+        Usuario salvo = usuarioRepository.save(usuario);
+        return mapperEntidadeParaDto(salvo);
     }
 
     public UsuarioDTO atualizar(Long id, UsuarioDTO dto) {
-        Usuario existente = repository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("Usuário não encontrado"));
-        modelMapper.map(dto, existente);
-        return modelMapper.map(repository.save(existente), UsuarioDTO.class);
+        Usuario usuarioExistente = usuarioRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
+
+        usuarioExistente.setEmail(dto.getEmail());
+        usuarioExistente.setSenha(dto.getSenha());
+        usuarioExistente.setTipoUsuario(dto.getTipoUsuario());
+
+        Usuario atualizado = usuarioRepository.save(usuarioExistente);
+        return mapperEntidadeParaDto(atualizado);
     }
 
     public void excluir(Long id) {
-        repository.deleteById(id);
+        usuarioRepository.deleteById(id);
     }
 }

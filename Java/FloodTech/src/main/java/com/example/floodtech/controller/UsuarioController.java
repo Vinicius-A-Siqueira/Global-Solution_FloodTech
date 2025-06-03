@@ -1,30 +1,47 @@
 package com.example.floodtech.controller;
 
-import com.example.floodtech.dto.UsuarioDTO;
+import com.example.floodtech.dto.*;
 import com.example.floodtech.model.Usuario;
-import com.example.floodtech.repository.UsuarioRepository;
+import com.example.floodtech.service.*;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
-import org.modelmapper.ModelMapper;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import jakarta.validation.Valid;
+
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/usuarios")
 @RequiredArgsConstructor
+@Tag(name = "Usuários")
+@SecurityRequirement(name = "bearerAuth")
 public class UsuarioController {
-    private final UsuarioRepository repo;
-    private final ModelMapper mapper;
+    private final UsuarioService service;
 
     @GetMapping
-    public List<UsuarioDTO> getAll() {
-        return repo.findAll().stream()
-                .map(user -> mapper.map(user, UsuarioDTO.class)).toList();
+    public ResponseEntity<List<UsuarioDTO>> listarTodos() {
+        return ResponseEntity.ok(service.listarTodos());
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<UsuarioDTO> buscarPorId(@PathVariable Long id) {
+        return ResponseEntity.ok(service.buscarPorId(id));
     }
 
     @PostMapping
-    public UsuarioDTO create(@RequestBody @Valid UsuarioDTO dto) {
-        Usuario saved = repo.save(mapper.map(dto, Usuario.class));
-        return mapper.map(saved, UsuarioDTO.class);
+    public ResponseEntity<UsuarioDTO> salvar(@RequestBody UsuarioDTO dto) {
+        return ResponseEntity.ok(service.salvar(dto));
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<UsuarioDTO> atualizar(@PathVariable Long id, @RequestBody UsuarioDTO dto) {
+        return ResponseEntity.ok(service.atualizar(id, dto));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> excluir(@PathVariable Long id) {
+        service.excluir(id);
+        return ResponseEntity.noContent().build();
     }
 }
