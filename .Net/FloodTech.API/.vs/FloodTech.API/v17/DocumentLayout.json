@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\labsfiap\\Downloads\\Global-Solution_FloodTech\\.Net\\FloodTech.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0FBF8F4F-0EE5-44C8-B8A1-255FFC8FABC4}|FloodTech.Infrastructure\\FloodTech.Infrastructure.csproj|c:\\users\\labsfiap\\downloads\\global-solution_floodtech\\.net\\floodtech.api\\floodtech.infrastructure\\configurations\\localizacaoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FBF8F4F-0EE5-44C8-B8A1-255FFC8FABC4}|FloodTech.Infrastructure\\FloodTech.Infrastructure.csproj|solutionrelative:floodtech.infrastructure\\configurations\\localizacaoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LocalizacaoConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\labsfiap\\Downloads\\Global-Solution_FloodTech\\.Net\\FloodTech.API\\FloodTech.Infrastructure\\Configurations\\LocalizacaoConfiguration.cs",
+              "RelativeDocumentMoniker": "FloodTech.Infrastructure\\Configurations\\LocalizacaoConfiguration.cs",
+              "ToolTip": "C:\\Users\\labsfiap\\Downloads\\Global-Solution_FloodTech\\.Net\\FloodTech.API\\FloodTech.Infrastructure\\Configurations\\LocalizacaoConfiguration.cs",
+              "RelativeToolTip": "FloodTech.Infrastructure\\Configurations\\LocalizacaoConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T14:52:10.962Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Application\obj\Debug\net8.0\FloodTech.Application.csproj.AssemblyReference.cache
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Application\obj\Debug\net8.0\FloodTech.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Application\obj\Debug\net8.0\FloodTech.Application.AssemblyInfoInputs.cache
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Application\obj\Debug\net8.0\FloodTech.Application.AssemblyInfo.cs
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Application\obj\Debug\net8.0\FloodTech.Application.csproj.CoreCompileInputs.cache
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Application\obj\Debug\net8.0\FloodTech.Application.sourcelink.json
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Application\bin\Debug\net8.0\FloodTech.Application.deps.json
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Application\bin\Debug\net8.0\FloodTech.Application.dll
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Application\bin\Debug\net8.0\FloodTech.Application.pdb
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Application\bin\Debug\net8.0\FloodTech.Domain.dll
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Application\bin\Debug\net8.0\FloodTech.Domain.pdb
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Application\obj\Debug\net8.0\FloodTec.6B367152.Up2Date
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Application\obj\Debug\net8.0\FloodTech.Application.dll
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Application\obj\Debug\net8.0\refint\FloodTech.Application.dll
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Application\obj\Debug\net8.0\FloodTech.Application.pdb
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Application\obj\Debug\net8.0\ref\FloodTech.Application.dll

@@ -1,0 +1,9 @@
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.API\obj\Debug\net8.0\FloodTech.API.csproj.AssemblyReference.cache
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.API\obj\Debug\net8.0\FloodTech.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.API\obj\Debug\net8.0\FloodTech.API.AssemblyInfoInputs.cache
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.API\obj\Debug\net8.0\FloodTech.API.AssemblyInfo.cs
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.API\obj\Debug\net8.0\FloodTech.API.csproj.CoreCompileInputs.cache
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.API\obj\Debug\net8.0\FloodTech.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.API\obj\Debug\net8.0\FloodTech.API.RazorAssemblyInfo.cache
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.API\obj\Debug\net8.0\FloodTech.API.RazorAssemblyInfo.cs
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.API\obj\Debug\net8.0\FloodTech.API.sourcelink.json

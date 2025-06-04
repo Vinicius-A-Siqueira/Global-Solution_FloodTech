@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "J4jYm2CtIBs=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\labsfiap\\Downloads\\Global-Solution_FloodTech\\.Net\\FloodTech.API\\FloodTech.Application\\FloodTech.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Softwares\\Nuget\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Softwares\\Nuget\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
+    "C:\\Softwares\\Nuget\\fluentvalidation\\11.11.0\\fluentvalidation.11.11.0.nupkg.sha512",
+    "C:\\Softwares\\Nuget\\fluentvalidation.aspnetcore\\11.3.1\\fluentvalidation.aspnetcore.11.3.1.nupkg.sha512",
+    "C:\\Softwares\\Nuget\\fluentvalidation.dependencyinjectionextensions\\11.11.0\\fluentvalidation.dependencyinjectionextensions.11.11.0.nupkg.sha512",
+    "C:\\Softwares\\Nuget\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Softwares\\Nuget\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Softwares\\Nuget\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Softwares\\Nuget\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Softwares\\Nuget\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

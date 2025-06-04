@@ -1,0 +1,6 @@
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Infrastructure\obj\Debug\net8.0\FloodTech.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Infrastructure\obj\Debug\net8.0\FloodTech.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Infrastructure\obj\Debug\net8.0\FloodTech.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Infrastructure\obj\Debug\net8.0\FloodTech.Infrastructure.AssemblyInfo.cs
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Infrastructure\obj\Debug\net8.0\FloodTech.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Infrastructure\obj\Debug\net8.0\FloodTech.Infrastructure.sourcelink.json
