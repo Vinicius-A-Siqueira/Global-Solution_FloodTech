@@ -9,7 +9,7 @@ import {
     TextInput,
     TouchableOpacity,
 } from 'react-native';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../hooks/useAuth';
 
 const LoginScreen = () => {
     const navigation = useNavigation();
@@ -20,7 +20,7 @@ const LoginScreen = () => {
 
     const handleLogin = async () => {
         try {
-            const response = await fetch('http://SEU_BACKEND/api/usuarios/login', {
+            const response = await fetch('http://10.3.73.30:8080/api/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, senha }),
@@ -28,8 +28,11 @@ const LoginScreen = () => {
 
             if (response.ok) {
                 const data = await response.json();
-                // data.tipo_usuario: 'cidadao' | 'operador' | 'admin'
-                login(data.tipo_usuario);
+                const userId = data.id_usuario;
+                const userType = data.tipo_usuario; // 'admin' ou 'user'
+
+                console.log("Login bem-sucedido. Tipo de usuário:", userType);
+                await login(userId, userType);
                 Alert.alert('Login realizado com sucesso!');
                 navigation.navigate('Home' as never);
             } else {

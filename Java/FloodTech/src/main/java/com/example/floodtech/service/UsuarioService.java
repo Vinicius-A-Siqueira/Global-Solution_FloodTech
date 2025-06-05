@@ -48,6 +48,9 @@ public class UsuarioService {
     }
 
     public UsuarioDTO salvar(UsuarioDTO dto) {
+        if (usuarioRepository.existsByEmail(dto.getEmail())) {
+            throw new IllegalArgumentException("E-mail já cadastrado.");
+        }
         Usuario usuario = mapperDtoParaEntidade(dto);
         usuario.setId(null); // para garantir insert e não update
         Usuario salvo = usuarioRepository.save(usuario);

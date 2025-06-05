@@ -1,54 +1,68 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import React, { ReactNode, createContext, useContext, useEffect, useState } from 'react';
+import type { ReactNode } from 'react';
 
-type UserType = 'cidadao' | 'operador' | 'admin' | null;
+import React, { createContext, useContext, useEffect, useState } from 'react';
 
-type AuthContextData = {
+interface AuthProviderProps {
+    children: ReactNode;
+}
+
+interface AuthContextData {
     isLoggedIn: boolean;
-    userType: UserType;
-    login: (tipo: UserType) => void;
-    logout: () => void;
-};
+    userType: 'admin' | 'user' | null;
+    userId: number | null;
+    loading: boolean;
+    login: (userId: number, userType: 'admin' | 'user') => Promise<void>;
+    logout: () => Promise<void>;
+}
 
-const AuthContext = createContext<AuthContextData>({
-    isLoggedIn: false,
-    userType: null,
-    login: () => { },
-    logout: () => { },
-});
+const AuthContext = createContext<AuthContextData | null>(null);
 
-export const AuthProvider = ({ children }: { children: ReactNode }) => {
+export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [userType, setUserType] = useState<UserType>(null);
+    const [userType, setUserType] = useState<'admin' | 'user' | null>(null);
+    const [userId, setUserId] = useState<number | null>(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const loadUserData = async () => {
-            const storedType = await AsyncStorage.getItem('@floodtech:userType');
-            if (storedType) {
+        async function loadStorageData() {
+            const storedUserType = await AsyncStorage.getItem('userType');
+            const storedUserId = await AsyncStorage.getItem('userId');
+            if (storedUserType && storedUserId) {
+                setUserType(storedUserType as 'admin' | 'user');
+                setUserId(Number(storedUserId));
                 setIsLoggedIn(true);
-                setUserType(storedType as UserType);
             }
-        };
-        loadUserData();
+            setLoading(false);
+        }
+        loadStorageData();
     }, []);
 
-    const login = async (tipo: UserType) => {
+    const login = async (id: number, type: 'admin' | 'user') => {
+        setUserId(id);
+        setUserType(type);
         setIsLoggedIn(true);
-        setUserType(tipo);
-        await AsyncStorage.setItem('@floodtech:userType', tipo ?? '');
+        await AsyncStorage.setItem('userId', id.toString());
+        await AsyncStorage.setItem('userType', type);
     };
 
     const logout = async () => {
-        setIsLoggedIn(false);
+        setUserId(null);
         setUserType(null);
-        await AsyncStorage.removeItem('@floodtech:userType');
+        setIsLoggedIn(false);
+        await AsyncStorage.removeItem('userId');
+        await AsyncStorage.removeItem('userType');
     };
 
     return (
-        <AuthContext.Provider value={{ isLoggedIn, userType, login, logout }}>
+        <AuthContext.Provider value={{ isLoggedIn, userType, userId, loading, login, logout }}>
             {children}
         </AuthContext.Provider>
     );
 };
 
-export const useAuth = () => useContext(AuthContext);
+export const useAuth = (): AuthContextData => {
+    const context = useContext(AuthContext);
+    if (!context) throw new Error('useAuth must be used within an AuthProvider');
+    return context;
+};

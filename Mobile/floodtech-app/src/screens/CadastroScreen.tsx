@@ -1,3 +1,4 @@
+import { Picker } from '@react-native-picker/picker';
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import {
@@ -18,19 +19,30 @@ const CadastroScreen = () => {
     const [endereco, setEndereco] = useState('');
     const [telefonePessoal, setTelefonePessoal] = useState('');
     const [telefoneEmergencia, setTelefoneEmergencia] = useState('');
+    const [tipoUsuario, setTipoUsuario] = useState('cidadão'); // Novo estado
 
     const handleCadastro = async () => {
         try {
             // 1. Cadastrar usuário
-            const usuarioRes = await fetch('http://SEU_BACKEND/api/usuarios', {
+            const usuarioRes = await fetch('http://10.3.73.30:8080/api/usuarios', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     email,
                     senha,
-                    tipo_usuario: 'cidadão'
+                    tipoUsuario  // <-- camelCase
                 })
             });
+
+            if (!usuarioRes.ok) {
+                const err = await usuarioRes.text();
+                if (err.includes("E-mail já cadastrado")) {
+                    Alert.alert("Erro", "Esse e-mail já está em uso. Tente outro.");
+                } else {
+                    Alert.alert("Erro ao criar usuário", err);
+                }
+                return;
+            }
 
             if (!usuarioRes.ok) {
                 const err = await usuarioRes.text();
@@ -38,10 +50,9 @@ const CadastroScreen = () => {
             }
 
             const usuario = await usuarioRes.json();
-            const id_usuario = usuario.id_usuario;
+            const id_usuario = usuario.id;  // correto
 
-            // 2. Cadastrar perfil vinculado ao usuário
-            const perfilRes = await fetch('http://SEU_BACKEND/api/perfis', {
+            const perfilRes = await fetch('http://10.3.73.30:8080/api/perfis', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -52,6 +63,7 @@ const CadastroScreen = () => {
                     telefone_emergencia: telefoneEmergencia
                 })
             });
+
 
             if (!perfilRes.ok) {
                 const err = await perfilRes.text();
@@ -85,6 +97,18 @@ const CadastroScreen = () => {
                 onChangeText={setSenha}
                 secureTextEntry
             />
+
+            <Text style={styles.label}>Tipo de Usuário</Text>
+            <Picker
+                selectedValue={tipoUsuario}
+                onValueChange={(itemValue) => setTipoUsuario(itemValue)}
+                style={styles.picker}
+            >
+                <Picker.Item label="Cidadão" value="cidadão" />
+                <Picker.Item label="Operador" value="operador" />
+                <Picker.Item label="Admin" value="admin" />
+            </Picker>
+
             <TextInput
                 style={styles.input}
                 placeholder="Nome completo"
@@ -144,6 +168,16 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         marginBottom: 12
     },
+    label: {
+        fontWeight: 'bold',
+        marginBottom: 4,
+        marginTop: 12
+    },
+    picker: {
+        backgroundColor: '#f1f1f1',
+        borderRadius: 8,
+        marginBottom: 12
+    },
     button: {
         backgroundColor: '#32CD32',
         padding: 14,
@@ -160,3 +194,4 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     }
 });
+

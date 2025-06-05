@@ -1,73 +1,69 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { ReactNode, createContext, useContext, useEffect, useState } from 'react';
-import * as api from '../services/apiService';
+import type { ReactNode } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 
-interface AuthContextData {
-    token: string | null;
-    tipoUsuario: 'cidadão' | 'operador' | 'admin' | null;
-    loading: boolean;
-    login: (email: string, senha: string) => Promise<void>;
-    logout: () => void;
+interface AuthProviderProps {
+    children: ReactNode;
 }
 
-const AuthContext = createContext<AuthContextData | undefined>(undefined);
+interface AuthContextData {
+    isLoggedIn: boolean;
+    userType: 'admin' | 'user' | null;
+    userId: number | null;
+    loading: boolean;
+    login: (userId: number, userType: 'admin' | 'user') => Promise<void>;
+    logout: () => Promise<void>;
+}
 
-export const AuthProvider = ({ children }: { children: ReactNode }) => {
-    const [token, setToken] = useState<string | null>(null);
-    const [tipoUsuario, setTipoUsuario] = useState<'cidadão' | 'operador' | 'admin' | null>(null);
+const AuthContext = createContext<AuthContextData | null>(null);
+
+export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [userType, setUserType] = useState<'admin' | 'user' | null>(null);
+    const [userId, setUserId] = useState<number | null>(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        // Carregar token e tipoUsuario do AsyncStorage ao iniciar
         async function loadStorageData() {
-            const storagedToken = await AsyncStorage.getItem('@FloodTech:token');
-            const storagedTipo = await AsyncStorage.getItem('@FloodTech:tipoUsuario');
-
-            if (storagedToken && storagedTipo) {
-                setToken(storagedToken);
-                setTipoUsuario(storagedTipo as any);
+            const storedUserType = await AsyncStorage.getItem('userType');
+            const storedUserId = await AsyncStorage.getItem('userId');
+            if (storedUserType && storedUserId) {
+                setUserType(storedUserType as 'admin' | 'user');
+                setUserId(Number(storedUserId));
+                setIsLoggedIn(true);
             }
             setLoading(false);
         }
         loadStorageData();
     }, []);
 
-    async function login(email: string, senha: string) {
-        setLoading(true);
-        try {
-            const data = await api.login(email, senha);
-            setToken(data.token);
-            setTipoUsuario(data.tipo_usuario as any);
+    const login = async (id: number, type: 'admin' | 'user') => {
+        setUserId(id);
+        setUserType(type);
+        setIsLoggedIn(true);
+        await AsyncStorage.setItem('userId', id.toString());
+        await AsyncStorage.setItem('userType', type);
+    };
 
-            await AsyncStorage.setItem('@FloodTech:token', data.token);
-            await AsyncStorage.setItem('@FloodTech:tipoUsuario', data.tipo_usuario);
-        } catch (error) {
-            throw error;
-        } finally {
-            setLoading(false);
-        }
-    }
-
-    function logout() {
-        setToken(null);
-        setTipoUsuario(null);
-        AsyncStorage.removeItem('@FloodTech:token');
-        AsyncStorage.removeItem('@FloodTech:tipoUsuario');
-    }
+    const logout = async () => {
+        setUserId(null);
+        setUserType(null);
+        setIsLoggedIn(false);
+        await AsyncStorage.removeItem('userId');
+        await AsyncStorage.removeItem('userType');
+    };
 
     return (
-        <AuthContext.Provider value= {{ token, tipoUsuario, loading, login, logout }
-}>
-    { children }
-    < /AuthContext.Provider>
+        <AuthContext.Provider
+      value= {{ isLoggedIn, userType, userId, loading, login, logout }
+}
+{ children }
+</AuthContext.Provider>
   );
 };
 
-// Hook para usar o contexto em componentes
-export function useAuth(): AuthContextData {
+export const useAuth = (): AuthContextData => {
     const context = useContext(AuthContext);
-    if (!context) {
-        throw new Error('useAuth deve ser usado dentro de um AuthProvider');
-    }
+    if (!context) throw new Error('useAuth must be used within an AuthProvider');
     return context;
-}
+};
