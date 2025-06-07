@@ -1,0 +1,156 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Vin\u00EDciusSiqueira\\Downloads\\Vinicius\\Global-Solution_FloodTech\\.Net\\FloodTech.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EF106FAA-302D-4379-A786-6DAD5B2106FF}|FloodTech.Domain\\FloodTech.Domain.csproj|c:\\users\\vin\u00EDciussiqueira\\downloads\\vinicius\\global-solution_floodtech\\.net\\floodtech.api\\floodtech.domain\\entities\\abrigo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF106FAA-302D-4379-A786-6DAD5B2106FF}|FloodTech.Domain\\FloodTech.Domain.csproj|solutionrelative:floodtech.domain\\entities\\abrigo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FBF8F4F-0EE5-44C8-B8A1-255FFC8FABC4}|FloodTech.Infrastructure\\FloodTech.Infrastructure.csproj|c:\\users\\vin\u00EDciussiqueira\\downloads\\vinicius\\global-solution_floodtech\\.net\\floodtech.api\\floodtech.infrastructure\\repositories\\abrigorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FBF8F4F-0EE5-44C8-B8A1-255FFC8FABC4}|FloodTech.Infrastructure\\FloodTech.Infrastructure.csproj|solutionrelative:floodtech.infrastructure\\repositories\\abrigorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FBF8F4F-0EE5-44C8-B8A1-255FFC8FABC4}|FloodTech.Infrastructure\\FloodTech.Infrastructure.csproj|c:\\users\\vin\u00EDciussiqueira\\downloads\\vinicius\\global-solution_floodtech\\.net\\floodtech.api\\floodtech.infrastructure\\configurations\\abrigoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FBF8F4F-0EE5-44C8-B8A1-255FFC8FABC4}|FloodTech.Infrastructure\\FloodTech.Infrastructure.csproj|solutionrelative:floodtech.infrastructure\\configurations\\abrigoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF106FAA-302D-4379-A786-6DAD5B2106FF}|FloodTech.Domain\\FloodTech.Domain.csproj|c:\\users\\vin\u00EDciussiqueira\\downloads\\vinicius\\global-solution_floodtech\\.net\\floodtech.api\\floodtech.domain\\interfaces\\iabrigorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF106FAA-302D-4379-A786-6DAD5B2106FF}|FloodTech.Domain\\FloodTech.Domain.csproj|solutionrelative:floodtech.domain\\interfaces\\iabrigorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FBF8F4F-0EE5-44C8-B8A1-255FFC8FABC4}|FloodTech.Infrastructure\\FloodTech.Infrastructure.csproj|c:\\users\\vin\u00EDciussiqueira\\downloads\\vinicius\\global-solution_floodtech\\.net\\floodtech.api\\floodtech.infrastructure\\data\\floodtechdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FBF8F4F-0EE5-44C8-B8A1-255FFC8FABC4}|FloodTech.Infrastructure\\FloodTech.Infrastructure.csproj|solutionrelative:floodtech.infrastructure\\data\\floodtechdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{976BCC40-67B5-48F5-9814-1AFFAE0333CF}|FloodTech.API\\FloodTech.API.csproj|c:\\users\\vin\u00EDciussiqueira\\downloads\\vinicius\\global-solution_floodtech\\.net\\floodtech.api\\floodtech.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{976BCC40-67B5-48F5-9814-1AFFAE0333CF}|FloodTech.API\\FloodTech.API.csproj|solutionrelative:floodtech.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{976BCC40-67B5-48F5-9814-1AFFAE0333CF}|FloodTech.API\\FloodTech.API.csproj|c:\\users\\vin\u00EDciussiqueira\\downloads\\vinicius\\global-solution_floodtech\\.net\\floodtech.api\\floodtech.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{976BCC40-67B5-48F5-9814-1AFFAE0333CF}|FloodTech.API\\FloodTech.API.csproj|solutionrelative:floodtech.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{976BCC40-67B5-48F5-9814-1AFFAE0333CF}|FloodTech.API\\FloodTech.API.csproj|c:\\users\\vin\u00EDciussiqueira\\downloads\\vinicius\\global-solution_floodtech\\.net\\floodtech.api\\floodtech.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{976BCC40-67B5-48F5-9814-1AFFAE0333CF}|FloodTech.API\\FloodTech.API.csproj|solutionrelative:floodtech.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IAbrigoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Vin\u00EDciusSiqueira\\Downloads\\Vinicius\\Global-Solution_FloodTech\\.Net\\FloodTech.API\\FloodTech.Domain\\Interfaces\\IAbrigoRepository.cs",
+              "RelativeDocumentMoniker": "FloodTech.Domain\\Interfaces\\IAbrigoRepository.cs",
+              "ToolTip": "C:\\Users\\Vin\u00EDciusSiqueira\\Downloads\\Vinicius\\Global-Solution_FloodTech\\.Net\\FloodTech.API\\FloodTech.Domain\\Interfaces\\IAbrigoRepository.cs",
+              "RelativeToolTip": "FloodTech.Domain\\Interfaces\\IAbrigoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T13:57:20.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AbrigoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Vin\u00EDciusSiqueira\\Downloads\\Vinicius\\Global-Solution_FloodTech\\.Net\\FloodTech.API\\FloodTech.Infrastructure\\Repositories\\AbrigoRepository.cs",
+              "RelativeDocumentMoniker": "FloodTech.Infrastructure\\Repositories\\AbrigoRepository.cs",
+              "ToolTip": "C:\\Users\\Vin\u00EDciusSiqueira\\Downloads\\Vinicius\\Global-Solution_FloodTech\\.Net\\FloodTech.API\\FloodTech.Infrastructure\\Repositories\\AbrigoRepository.cs",
+              "RelativeToolTip": "FloodTech.Infrastructure\\Repositories\\AbrigoRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAWwBcAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T13:53:47.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Abrigo.cs",
+              "DocumentMoniker": "C:\\Users\\Vin\u00EDciusSiqueira\\Downloads\\Vinicius\\Global-Solution_FloodTech\\.Net\\FloodTech.API\\FloodTech.Domain\\Entities\\Abrigo.cs",
+              "RelativeDocumentMoniker": "FloodTech.Domain\\Entities\\Abrigo.cs",
+              "ToolTip": "C:\\Users\\Vin\u00EDciusSiqueira\\Downloads\\Vinicius\\Global-Solution_FloodTech\\.Net\\FloodTech.API\\FloodTech.Domain\\Entities\\Abrigo.cs",
+              "RelativeToolTip": "FloodTech.Domain\\Entities\\Abrigo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T13:10:52.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AbrigoConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Vin\u00EDciusSiqueira\\Downloads\\Vinicius\\Global-Solution_FloodTech\\.Net\\FloodTech.API\\FloodTech.Infrastructure\\Configurations\\AbrigoConfiguration.cs",
+              "RelativeDocumentMoniker": "FloodTech.Infrastructure\\Configurations\\AbrigoConfiguration.cs",
+              "ToolTip": "C:\\Users\\Vin\u00EDciusSiqueira\\Downloads\\Vinicius\\Global-Solution_FloodTech\\.Net\\FloodTech.API\\FloodTech.Infrastructure\\Configurations\\AbrigoConfiguration.cs",
+              "RelativeToolTip": "FloodTech.Infrastructure\\Configurations\\AbrigoConfiguration.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAADgvysAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T12:58:23.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FloodTechDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Vin\u00EDciusSiqueira\\Downloads\\Vinicius\\Global-Solution_FloodTech\\.Net\\FloodTech.API\\FloodTech.Infrastructure\\Data\\FloodTechDbContext.cs",
+              "RelativeDocumentMoniker": "FloodTech.Infrastructure\\Data\\FloodTechDbContext.cs",
+              "ToolTip": "C:\\Users\\Vin\u00EDciusSiqueira\\Downloads\\Vinicius\\Global-Solution_FloodTech\\.Net\\FloodTech.API\\FloodTech.Infrastructure\\Data\\FloodTechDbContext.cs",
+              "RelativeToolTip": "FloodTech.Infrastructure\\Data\\FloodTechDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T12:53:04.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Vin\u00EDciusSiqueira\\Downloads\\Vinicius\\Global-Solution_FloodTech\\.Net\\FloodTech.API\\FloodTech.API\\appsettings.json",
+              "RelativeDocumentMoniker": "FloodTech.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\Vin\u00EDciusSiqueira\\Downloads\\Vinicius\\Global-Solution_FloodTech\\.Net\\FloodTech.API\\FloodTech.API\\appsettings.json",
+              "RelativeToolTip": "FloodTech.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-06T12:50:46.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Vin\u00EDciusSiqueira\\Downloads\\Vinicius\\Global-Solution_FloodTech\\.Net\\FloodTech.API\\FloodTech.API\\Program.cs",
+              "RelativeDocumentMoniker": "FloodTech.API\\Program.cs",
+              "ToolTip": "C:\\Users\\Vin\u00EDciusSiqueira\\Downloads\\Vinicius\\Global-Solution_FloodTech\\.Net\\FloodTech.API\\FloodTech.API\\Program.cs",
+              "RelativeToolTip": "FloodTech.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T12:29:25.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Vin\u00EDciusSiqueira\\Downloads\\Vinicius\\Global-Solution_FloodTech\\.Net\\FloodTech.API\\FloodTech.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "FloodTech.API\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Vin\u00EDciusSiqueira\\Downloads\\Vinicius\\Global-Solution_FloodTech\\.Net\\FloodTech.API\\FloodTech.API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "FloodTech.API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-06T12:47:23.195Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

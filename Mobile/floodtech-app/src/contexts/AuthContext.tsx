@@ -1,7 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { ReactNode } from 'react';
-
 import React, { createContext, useContext, useEffect, useState } from 'react';
+import { TipoUsuario } from '../types/types';
 
 interface AuthProviderProps {
     children: ReactNode;
@@ -9,10 +9,10 @@ interface AuthProviderProps {
 
 interface AuthContextData {
     isLoggedIn: boolean;
-    userType: 'admin' | 'user' | null;
+    userType: TipoUsuario | null;
     userId: number | null;
     loading: boolean;
-    login: (userId: number, userType: 'admin' | 'user') => Promise<void>;
+    login: (userId: number, userType: TipoUsuario) => Promise<void>;
     logout: () => Promise<void>;
 }
 
@@ -20,7 +20,7 @@ const AuthContext = createContext<AuthContextData | null>(null);
 
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [userType, setUserType] = useState<'admin' | 'user' | null>(null);
+    const [userType, setUserType] = useState<TipoUsuario | null>(null);
     const [userId, setUserId] = useState<number | null>(null);
     const [loading, setLoading] = useState(true);
 
@@ -29,7 +29,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
             const storedUserType = await AsyncStorage.getItem('userType');
             const storedUserId = await AsyncStorage.getItem('userId');
             if (storedUserType && storedUserId) {
-                setUserType(storedUserType as 'admin' | 'user');
+                setUserType(storedUserType as TipoUsuario);
                 setUserId(Number(storedUserId));
                 setIsLoggedIn(true);
             }
@@ -38,7 +38,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         loadStorageData();
     }, []);
 
-    const login = async (id: number, type: 'admin' | 'user') => {
+    const login = async (id: number, type: TipoUsuario) => {
         setUserId(id);
         setUserType(type);
         setIsLoggedIn(true);
@@ -66,3 +66,4 @@ export const useAuth = (): AuthContextData => {
     if (!context) throw new Error('useAuth must be used within an AuthProvider');
     return context;
 };
+

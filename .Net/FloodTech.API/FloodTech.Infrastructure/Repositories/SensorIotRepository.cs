@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FloodTech.Domain.Entities;
+﻿using FloodTech.Domain.Entities;
 using FloodTech.Domain.Interfaces;
-using FloodTech.Infrastructure.Context;
 using FloodTech.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -22,12 +16,17 @@ namespace FloodTech.Infrastructure.Repositories
 
         public async Task<IEnumerable<SensorIot>> GetAllAsync()
         {
-            return await _context.Sensores.Include(s => s.Localizacao).ToListAsync();
+            return await _context.Sensores
+                .Include(s => s.Localizacao)
+                .Include(s => s.Leituras)
+                .ToListAsync();
         }
 
-        public async Task<SensorIot> GetByIdAsync(int id)
+        public async Task<SensorIot?> GetByIdAsync(int id)
         {
-            return await _context.Sensores.Include(s => s.Localizacao)
+            return await _context.Sensores
+                .Include(s => s.Localizacao)
+                .Include(s => s.Leituras)
                 .FirstOrDefaultAsync(s => s.Id == id);
         }
 
@@ -56,17 +55,18 @@ namespace FloodTech.Infrastructure.Repositories
 
         public async Task<IEnumerable<SensorIot>> BuscarPorNivelAguaAsync(decimal minimo, decimal maximo)
         {
-            // Supondo que o nível de água seja um campo do sensor ou relacionado
             return await _context.Sensores
-                .Where(s => s.TipoSensor == "NIVEL" && s.Valor >= minimo && s.Valor <= maximo)
+                .Include(s => s.Leituras)
+                .Where(s => s.TipoSensor == "NIVEL" &&
+                       s.Leituras.Any(l => l.Valor >= minimo && l.Valor <= maximo))
                 .ToListAsync();
         }
 
         public async Task<IEnumerable<SensorIot>> BuscarPorDataLeituraAsync(DateTime data)
         {
-            // Supondo que haja uma tabela de leituras associada
             return await _context.Sensores
-                .Where(s => s.DataUltimaLeitura.Date == data.Date)
+                .Include(s => s.Leituras)
+                .Where(s => s.Leituras.Any(l => l.DataHora.Date == data.Date))
                 .ToListAsync();
         }
     }

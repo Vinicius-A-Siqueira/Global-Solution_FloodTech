@@ -18,8 +18,15 @@ namespace FloodTech.Infrastructure
         {
             services.Configure<OracleSettings>(configuration.GetSection("OracleSettings"));
 
+            var oracleSettings = configuration.GetSection("OracleSettings").Get<OracleSettings>();
+
+            if (oracleSettings == null || string.IsNullOrWhiteSpace(oracleSettings.ConnectionString))
+            {
+                throw new Exception("Configuração 'OracleSettings.ConnectionString' não encontrada no appsettings.json");
+            }
+
             services.AddDbContext<FloodTechDbContext>(options =>
-                options.UseOracle(configuration.GetSection("OracleSettings").Get<OracleSettings>().ConnectionString));
+                options.UseOracle(oracleSettings.ConnectionString));
 
             services.AddScoped<ILocalizacaoRepository, LocalizacaoRepository>();
             services.AddScoped<IAbrigoRepository, AbrigoRepository>();

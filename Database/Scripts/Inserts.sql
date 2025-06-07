@@ -13,10 +13,10 @@ BEGIN
 END;
 /
 BEGIN
-    inserir_usuario('c1@email.com', 'senha123', 'cidadão');
+    inserir_usuario('c1@email.com', 'senha123', 'cidadao');
     inserir_usuario('c2@email.com', 'senha123', 'operador');
     inserir_usuario('admin@email.com', 'admin123', 'admin');
-    inserir_usuario('teste1@email.com', 'teste123', 'cidadão');
+    inserir_usuario('teste1@email.com', 'teste123', 'cidadao');
     inserir_usuario('teste2@email.com', 'teste456', 'operador');
 END;
 /
@@ -214,9 +214,9 @@ END;
 
 BEGIN
     inserir_alerta('Alerta de enchente iminente', SYSDATE - 1, 'ALTO', 1, 1);
-    inserir_alerta('Risco moderado de alagamento', SYSDATE - 2, 'MÉDIO', 2, 1);
+    inserir_alerta('Risco moderado de alagamento', SYSDATE - 2, 'Mï¿½DIO', 2, 1);
     inserir_alerta('Monitoramento preventivo', SYSDATE - 3, 'BAIXO', 3, 2);
     inserir_alerta('Volume de chuva elevado', SYSDATE - 4, 'ALTO', 1, 2);
-    inserir_alerta('Zona em atenção', SYSDATE - 5, 'MÉDIO', 2, 3);
+    inserir_alerta('Zona em atenï¿½ï¿½o', SYSDATE - 5, 'Mï¿½DIO', 2, 3);
 END;
 /

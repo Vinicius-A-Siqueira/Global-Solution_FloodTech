@@ -19,12 +19,12 @@ const CadastroScreen = () => {
     const [endereco, setEndereco] = useState('');
     const [telefonePessoal, setTelefonePessoal] = useState('');
     const [telefoneEmergencia, setTelefoneEmergencia] = useState('');
-    const [tipoUsuario, setTipoUsuario] = useState('cidadão'); // Novo estado
+    const [tipoUsuario, setTipoUsuario] = useState('cidadao'); // Novo estado
 
     const handleCadastro = async () => {
         try {
             // 1. Cadastrar usuário
-            const usuarioRes = await fetch('http://10.3.73.30:8080/api/usuarios', {
+            const usuarioRes = await fetch('http://10.100.0.102:8080/api/usuarios', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -39,15 +39,10 @@ const CadastroScreen = () => {
                 if (err.includes("E-mail já cadastrado")) {
                     Alert.alert("Erro", "Esse e-mail já está em uso. Tente outro.");
                 } else {
-                    Alert.alert("Erro ao criar usuário", err);
+                    throw new Error(`Erro ao criar usuário: ${err}`);
                 }
                 return;
-            }
-
-            if (!usuarioRes.ok) {
-                const err = await usuarioRes.text();
-                throw new Error(`Erro ao criar usuário: ${err}`);
-            }
+}
 
             const usuario = await usuarioRes.json();
             const id_usuario = usuario.id;  // correto
@@ -72,14 +67,18 @@ const CadastroScreen = () => {
 
             Alert.alert('Cadastro realizado com sucesso!');
             navigation.navigate('Login' as never);
-        } catch (error: any) {
-            console.error(error);
-            Alert.alert('Erro ao cadastrar', error.message);
+        } catch (error: unknown) {
+            if (error instanceof Error) {
+                console.error(error);
+                Alert.alert('Erro ao cadastrar', error.message);
+            } else {
+                Alert.alert('Erro inesperado');
+            }
         }
     };
 
     return (
-        <ScrollView contentContainerStyle={styles.container}>
+        <ScrollView contentContainerStyle={styles.container} keyboardShouldPersistTaps="handled">
             <Text style={styles.title}>Cadastro</Text>
 
             <TextInput
@@ -104,7 +103,7 @@ const CadastroScreen = () => {
                 onValueChange={(itemValue) => setTipoUsuario(itemValue)}
                 style={styles.picker}
             >
-                <Picker.Item label="Cidadão" value="cidadão" />
+                <Picker.Item label="Cidadão" value="cidadao" />
                 <Picker.Item label="Operador" value="operador" />
                 <Picker.Item label="Admin" value="admin" />
             </Picker>

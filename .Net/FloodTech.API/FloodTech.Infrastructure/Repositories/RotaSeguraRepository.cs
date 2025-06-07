@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using FloodTech.Domain.Entities;
 using FloodTech.Domain.Interfaces;
-using FloodTech.Infrastructure.Context;
 using FloodTech.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -23,17 +22,22 @@ namespace FloodTech.Infrastructure.Repositories
         public async Task<IEnumerable<RotaSegura>> GetAllAsync()
         {
             return await _context.Rotas
-                .Include(r => r.Origem)
-                .Include(r => r.Destino)
+                .Include(r => r.OrigemLocalizacao)
+                .Include(r => r.DestinoLocalizacao)
                 .ToListAsync();
         }
 
         public async Task<RotaSegura> GetByIdAsync(int id)
         {
-            return await _context.Rotas
-                .Include(r => r.Origem)
-                .Include(r => r.Destino)
+            var rota = await _context.Rotas
+                .Include(r => r.OrigemLocalizacao)
+                .Include(r => r.DestinoLocalizacao)
                 .FirstOrDefaultAsync(r => r.Id == id);
+
+            if (rota == null)
+                throw new KeyNotFoundException($"Rota com ID {id} não encontrada.");
+
+            return rota;
         }
 
         public async Task<RotaSegura> AddAsync(RotaSegura rota)
@@ -70,7 +74,7 @@ namespace FloodTech.Infrastructure.Repositories
         {
             // Supondo que você tenha um campo de distância em km
             return await _context.Rotas
-                .Where(r => r.TempoEstimado <= distanciaMaximaKm)
+                .Where(r => r.TempoEstimado <= (decimal)distanciaMaximaKm)
                 .ToListAsync();
         }
     }

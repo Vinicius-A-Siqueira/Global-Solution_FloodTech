@@ -26,8 +26,14 @@ namespace FloodTech.Infrastructure.Repositories
 
         public async Task<Abrigo> GetByIdAsync(int id)
         {
-            return await _context.Abrigos.Include(a => a.Localizacao)
+            var abrigo = await _context.Abrigos
+                .Include(a => a.Localizacao)
                 .FirstOrDefaultAsync(a => a.Id == id);
+
+            if (abrigo == null)
+                throw new KeyNotFoundException($"Abrigo com ID {id} não encontrado.");
+
+            return abrigo;
         }
 
         public async Task<Abrigo> AddAsync(Abrigo abrigo)

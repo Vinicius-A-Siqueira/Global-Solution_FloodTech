@@ -25,28 +25,26 @@ const PerfilScreen = () => {
     const [saving, setSaving] = useState(false);
 
     useEffect(() => {
-        // Função para buscar perfil pelo id do usuário
         const fetchPerfil = async () => {
             try {
-                const res = await fetch(`http://10.3.73.30:8080/api/perfis/usuario/${userId}`);
-                if (!res.ok) {
-                    throw new Error('Erro ao buscar perfil');
-                }
-                const perfil = await res.json();
+                const response = await fetch(`http://10.100.0.102:8080/api/perfis/usuario/${userId}`);
+                if (!response.ok) throw new Error('Erro ao buscar perfil');
+
+                const perfil = await response.json();
                 setNome(perfil.nome_completo);
-                setEmail(perfil.email); // se retornar email no perfil, ou use o do Auth
                 setEndereco(perfil.endereco);
                 setTelefonePessoal(perfil.telefone_pessoal);
                 setTelefoneEmergencia(perfil.telefone_emergencia);
-            } catch (error: any) {
-                Alert.alert('Erro', error.message);
+            } catch (error) {
+                Alert.alert('Erro', 'Não foi possível carregar o perfil.');
             } finally {
                 setLoading(false);
             }
         };
 
         fetchPerfil();
-    }, [userId]);
+    }, []);
+
 
     const handleLogout = async () => {
         await logout();
@@ -54,33 +52,29 @@ const PerfilScreen = () => {
         navigation.navigate('Login' as never);
     };
 
-    const handleSalvar = async () => {
+    const handleSave = async () => {
         setSaving(true);
         try {
-            const res = await fetch('http://10.3.73.30:8080/api/perfis', {
-                method: 'PUT', // supondo que atualizar é PUT, ajuste se necessário
+            const response = await fetch(`http://10.100.0.102:8080/api/perfis/usuario/${userId}`, {
+                method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    tbl_usuario_id_usuario: userId,
-                    nome_completo: nome, // geralmente nome não muda, mas pode enviar
+                    nome_completo: nome,
                     endereco,
                     telefone_pessoal: telefonePessoal,
                     telefone_emergencia: telefoneEmergencia,
                 }),
             });
 
-            if (!res.ok) {
-                const err = await res.text();
-                throw new Error(`Erro ao atualizar perfil: ${err}`);
-            }
-
-            Alert.alert('Sucesso', 'Perfil atualizado!');
-        } catch (error: any) {
-            Alert.alert('Erro', error.message);
+            if (!response.ok) throw new Error('Erro ao salvar perfil');
+            Alert.alert('Sucesso', 'Perfil atualizado com sucesso!');
+        } catch (err) {
+            Alert.alert('Erro', 'Falha ao salvar perfil');
         } finally {
             setSaving(false);
         }
     };
+
 
     if (loading) {
         return (
@@ -128,7 +122,7 @@ const PerfilScreen = () => {
 
             <TouchableOpacity
                 style={[styles.button, saving && { backgroundColor: '#a0a0a0' }]}
-                onPress={handleSalvar}
+                onPress={handleSave}
                 disabled={saving}
             >
                 <Text style={styles.buttonText}>{saving ? 'Salvando...' : 'Salvar'}</Text>

@@ -10,3 +10,15 @@ C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTe
 C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Domain\obj\Debug\net8.0\refint\FloodTech.Domain.dll
 C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Domain\obj\Debug\net8.0\FloodTech.Domain.pdb
 C:\Users\labsfiap\Downloads\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Domain\obj\Debug\net8.0\ref\FloodTech.Domain.dll
+C:\Users\ViníciusSiqueira\Downloads\Vinicius\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Domain\bin\Debug\net8.0\FloodTech.Domain.deps.json
+C:\Users\ViníciusSiqueira\Downloads\Vinicius\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Domain\bin\Debug\net8.0\FloodTech.Domain.dll
+C:\Users\ViníciusSiqueira\Downloads\Vinicius\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Domain\bin\Debug\net8.0\FloodTech.Domain.pdb
+C:\Users\ViníciusSiqueira\Downloads\Vinicius\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Domain\obj\Debug\net8.0\FloodTech.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ViníciusSiqueira\Downloads\Vinicius\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Domain\obj\Debug\net8.0\FloodTech.Domain.AssemblyInfoInputs.cache
+C:\Users\ViníciusSiqueira\Downloads\Vinicius\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Domain\obj\Debug\net8.0\FloodTech.Domain.AssemblyInfo.cs
+C:\Users\ViníciusSiqueira\Downloads\Vinicius\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Domain\obj\Debug\net8.0\FloodTech.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ViníciusSiqueira\Downloads\Vinicius\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Domain\obj\Debug\net8.0\FloodTech.Domain.sourcelink.json
+C:\Users\ViníciusSiqueira\Downloads\Vinicius\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Domain\obj\Debug\net8.0\FloodTech.Domain.dll
+C:\Users\ViníciusSiqueira\Downloads\Vinicius\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Domain\obj\Debug\net8.0\refint\FloodTech.Domain.dll
+C:\Users\ViníciusSiqueira\Downloads\Vinicius\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Domain\obj\Debug\net8.0\FloodTech.Domain.pdb
+C:\Users\ViníciusSiqueira\Downloads\Vinicius\Global-Solution_FloodTech\.Net\FloodTech.API\FloodTech.Domain\obj\Debug\net8.0\ref\FloodTech.Domain.dll

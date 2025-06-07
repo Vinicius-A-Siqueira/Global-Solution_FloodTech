@@ -9,9 +9,9 @@ namespace FloodTech.Application.DTOs
     public class SensorIotDto
     {
         public int Id { get; set; }
-        public string TipoSensor { get; set; }
-        public string Modelo { get; set; }
-        public string LocalizacaoDescricao { get; set; }
+        public required string TipoSensor { get; set; }
+        public required string Modelo { get; set; }
+        public required string LocalizacaoDescricao { get; set; }
         public int LocalizacaoId { get; set; }
     }
 }

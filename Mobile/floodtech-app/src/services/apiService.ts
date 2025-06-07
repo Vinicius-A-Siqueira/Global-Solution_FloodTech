@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:8080/api';
+export const API_BASE = 'http://10.100.0.102:8080/api';
 
 interface LoginResponse {
     token: string;
@@ -6,7 +6,7 @@ interface LoginResponse {
 }
 
 export async function login(email: string, senha: string): Promise<LoginResponse> {
-    const response = await fetch(`${API_BASE_URL}/auth/login`, {
+    const response = await fetch(`${API_BASE}/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, senha }),
@@ -26,7 +26,7 @@ interface CadastroUsuarioData {
 }
 
 export async function cadastroUsuario(data: CadastroUsuarioData) {
-    const response = await fetch(`${API_BASE_URL}/usuarios`, {
+    const response = await fetch(`${API_BASE}/usuarios`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
@@ -41,7 +41,7 @@ export async function cadastroUsuario(data: CadastroUsuarioData) {
 }
 
 export async function getPerfil(token: string) {
-    const response = await fetch(`${API_BASE_URL}/perfil`, {
+    const response = await fetch(`${API_BASE}/perfil`, {
         headers: { Authorization: `Bearer ${token}` },
     });
 
@@ -60,7 +60,7 @@ export interface Alerta {
 }
 
 export async function getAlertas(token: string): Promise<Alerta[]> {
-    const response = await fetch(`${API_BASE_URL}/alertas`, {
+    const response = await fetch(`${API_BASE}/alertas`, {
         headers: { Authorization: `Bearer ${token}` },
     });
 
@@ -79,7 +79,7 @@ export interface Ocorrencia {
 }
 
 export async function getOcorrencias(token: string): Promise<Ocorrencia[]> {
-    const response = await fetch(`${API_BASE_URL}/ocorrencias`, {
+    const response = await fetch(`${API_BASE}/ocorrencias`, {
         headers: { Authorization: `Bearer ${token}` },
     });
 

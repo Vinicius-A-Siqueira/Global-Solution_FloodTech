@@ -87,7 +87,10 @@
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
       "FloodTech.Domain/1.0.0": {
         "runtime": {
-          "FloodTech.Domain.dll": {}
+          "FloodTech.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

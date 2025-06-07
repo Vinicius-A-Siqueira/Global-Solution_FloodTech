@@ -13,7 +13,7 @@ CREATE TABLE tbl_usuario (
     email          VARCHAR2(100) NOT NULL UNIQUE,
     senha          VARCHAR2(20) NOT NULL,
     tipo_usuario   VARCHAR2(10) NOT NULL,
-    CONSTRAINT chk_tipo_usuario CHECK (tipo_usuario IN ('cidadão', 'operador', 'admin'))
+    CONSTRAINT chk_tipo_usuario CHECK (tipo_usuario IN ('cidadao', 'operador', 'admin'))
 );
 
 CREATE TABLE tbl_perfil (
@@ -52,7 +52,7 @@ CREATE TABLE tbl_alerta (
     nivel_alerta                   VARCHAR2(20) NOT NULL,
     tbl_usuario_id_usuario         NUMBER NOT NULL,
     tbl_localizacao_id_localizacao NUMBER NOT NULL,
-    CONSTRAINT chk_nivel_alerta CHECK (nivel_alerta IN ('BAIXO', 'MÉDIO', 'ALTO')),
+    CONSTRAINT chk_nivel_alerta CHECK (nivel_alerta IN ('BAIXO', 'Mï¿½DIO', 'ALTO')),
     CONSTRAINT fk_alerta_usuario FOREIGN KEY (tbl_usuario_id_usuario) REFERENCES tbl_usuario(id_usuario),
     CONSTRAINT fk_alerta_localizacao FOREIGN KEY (tbl_localizacao_id_localizacao) REFERENCES tbl_localizacao(id_localizacao)
 );

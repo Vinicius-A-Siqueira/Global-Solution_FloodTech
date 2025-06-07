@@ -10,7 +10,7 @@ namespace FloodTech.Domain.Interfaces
     public interface ISensorIotRepository
     {
         Task<IEnumerable<SensorIot>> GetAllAsync();
-        Task<SensorIot> GetByIdAsync(int id);
+        Task<SensorIot?> GetByIdAsync(int id);
         Task<SensorIot> AddAsync(SensorIot sensor);
         Task<SensorIot> UpdateAsync(SensorIot sensor);
         Task<bool> DeleteAsync(int id);

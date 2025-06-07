@@ -1,9 +1,11 @@
 import { MaterialIcons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
+import { ActivityIndicator, View } from 'react-native';
 import { useAuth } from '../hooks/useAuth';
 
 import AcionarAlarmeScreen from '../screens/AcionarAlarmeScreen';
+import AlertasScreen from '../screens/AlertasScreen';
 import EditarAlarmeScreen from '../screens/EditarAlarmeScreen';
 import HomeScreen from '../screens/HomeScreen';
 import OcorrenciasScreen from '../screens/OcorrenciasScreen';
@@ -16,7 +18,11 @@ export default function AppTabs() {
     const { isLoggedIn, userType, loading } = useAuth();
 
     if (loading || !isLoggedIn || !userType) {
-        return null; // ou um <ActivityIndicator />
+        return (
+            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                <ActivityIndicator size="large" color="#1e90ff" />
+            </View>
+        );
     }
 
     return (
@@ -24,8 +30,28 @@ export default function AppTabs() {
             screenOptions={({ route }) => ({
                 headerShown: false,
                 tabBarIcon: ({ color, size }) => {
-                    return <MaterialIcons name="admin-panel-settings" size={24} color="black" />;
+                    let iconName: keyof typeof MaterialIcons.glyphMap = "home";
+                    
+                    if (route.name === 'Home') {
+                        iconName = 'home';
+                    } else if (route.name === 'Perfil') {
+                        iconName = 'person';
+                    } else if (route.name === 'Ocorrencias') {
+                        iconName = 'report-problem';
+                    } else if (route.name === 'AcionarAlarme') {
+                        iconName = 'notifications-active';
+                    } else if (route.name === 'EditarAlarme') {
+                        iconName = 'edit';
+                    } else if (route.name === 'Alertas') {
+                        iconName = 'warning';
+                    } else if (route.name === 'Sobre') {
+                        iconName = 'info';
+                    }
+
+                    return <MaterialIcons name={iconName} size={size} color={color} />;
                 },
+                tabBarActiveTintColor: '#1e90ff',
+                tabBarInactiveTintColor: 'gray',
             })}
         >
             <Tab.Screen name="Home" component={HomeScreen} />
@@ -39,7 +65,9 @@ export default function AppTabs() {
             {userType === 'admin' && (
                 <Tab.Screen name="EditarAlarme" component={EditarAlarmeScreen} />
             )}
+            <Tab.Screen name="Alertas" component={AlertasScreen} />
             <Tab.Screen name="Sobre" component={SobreScreen} />
         </Tab.Navigator>
     );
 }
+

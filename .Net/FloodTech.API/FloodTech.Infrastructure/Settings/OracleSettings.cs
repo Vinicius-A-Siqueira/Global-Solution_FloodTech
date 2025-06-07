@@ -8,6 +8,6 @@ namespace FloodTech.Infrastructure.Settings
 {
     public class OracleSettings
     {
-        public string ConnectionString { get; set; } = string.Empty;
+        public string ConnectionString { get; set; }
     }
 }

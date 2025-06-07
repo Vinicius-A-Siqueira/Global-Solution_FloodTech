@@ -11,9 +11,9 @@ namespace FloodTech.Application.DTOs
         public int Id { get; set; }
         public double Latitude { get; set; }
         public double Longitude { get; set; }
-        public string Bairro { get; set; }
-        public string Cidade { get; set; }
-        public string Estado { get; set; }
-        public string Cep { get; set; }
+        public required string Bairro { get; set; }
+        public required string Cidade { get; set; }
+        public required string Estado { get; set; }
+        public required string Cep { get; set; }
     }
 }

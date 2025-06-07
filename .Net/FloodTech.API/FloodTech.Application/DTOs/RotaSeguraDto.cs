@@ -14,7 +14,7 @@ namespace FloodTech.Application.DTOs
         public char Bloqueada { get; set; }
         public int OrigemLocalizacaoId { get; set; }
         public int DestinoLocalizacaoId { get; set; }
-        public LocalizacaoDto OrigemLocalizacao { get; set; }
-        public LocalizacaoDto DestinoLocalizacao { get; set; }
+        public required LocalizacaoDto OrigemLocalizacao { get; set; }
+        public required LocalizacaoDto DestinoLocalizacao { get; set; }
     }
 }

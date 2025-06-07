@@ -1,5 +1,5 @@
 // Tipo dos usuários do sistema
-export type TipoUsuario = 'cidadão' | 'operador' | 'admin';
+export type TipoUsuario = 'cidadao' | 'operador' | 'admin';
 
 // Dados do usuário (tbl_usuario)
 export interface Usuario {

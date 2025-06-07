@@ -47,8 +47,9 @@ namespace FloodTech.Infrastructure.Configurations
                    .HasConstraintName("fk_sensor_localizacao")
                    .OnDelete(DeleteBehavior.Restrict);
 
-            // CHECK constraint não pode ser configurada via Fluent API diretamente
-            // Deve ser criada via script SQL na migration ou manualmente no banco
+            builder.HasCheckConstraint("CK_tipo_sensor",
+                "tipo_sensor IN ('UMIDADE', 'NIVEL', 'IMAGEM')");
+
         }
     }
 }

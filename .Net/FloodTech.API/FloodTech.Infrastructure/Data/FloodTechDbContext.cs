@@ -17,16 +17,20 @@ namespace FloodTech.Infrastructure.Data
         // DbSets para cada entidade
         public DbSet<Localizacao> Localizacoes { get; set; }
         public DbSet<Abrigo> Abrigos { get; set; }
-        public DbSet<SensorIot> SensorsIot { get; set; }
-        public DbSet<RotaSegura> RotasSeguras { get; set; }
+        public DbSet<SensorIot> Sensores { get; set; }
+        public DbSet<RotaSegura> Rotas { get; set; }
+        public DbSet<LeituraSensor> Leituras { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+       
+        modelBuilder.HasDefaultSchema("RM551939");
 
-            // Aqui você pode aplicar configurações específicas usando Fluent API
-            // Por exemplo, aplicar configurações via classes separadas:
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(FloodTechDbContext).Assembly);
+            
+       
+
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(FloodTechDbContext).Assembly);
         }
     }
 }

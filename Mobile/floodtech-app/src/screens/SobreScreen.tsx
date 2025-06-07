@@ -6,7 +6,7 @@ const SobreScreen = () => {
         <ScrollView contentContainerStyle={styles.container}>
             <Text style={styles.title}>Sobre o Problema das Enchentes Urbanas</Text>
             <Image
-                source={require('../assets/enchente.jpg')} // Coloque uma imagem ilustrativa na pasta assets
+                source={require('../assets/enchente.jpg')}
                 style={styles.image}
                 resizeMode="contain"
             />

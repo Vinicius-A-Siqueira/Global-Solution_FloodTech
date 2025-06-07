@@ -13,30 +13,32 @@ namespace FloodTech.Infrastructure.Configurations
     {
         public void Configure(EntityTypeBuilder<Abrigo> builder)
         {
-            builder.ToTable("tbl_abrigo");
+            builder.ToTable("TBL_ABRIGO", "RM551939");
 
             builder.HasKey(a => a.Id);
 
             builder.Property(a => a.Id)
-                   .HasColumnName("id_abrigo")
+                   .HasColumnName("ID_ABRIGO")
                    .ValueGeneratedOnAdd();
 
             builder.Property(a => a.Nome)
-                   .HasColumnName("nome")
+                   .HasColumnName("NOME")
                    .HasMaxLength(100)
                    .IsRequired();
 
             builder.Property(a => a.Capacidade)
-                   .HasColumnName("capacidade")
+                   .HasColumnName("CAPACIDADE")
                    .IsRequired();
 
             builder.Property(a => a.Disponivel)
-                   .HasColumnName("disponivel")
-                   .HasColumnType("CHAR(1)")
-                   .IsRequired();
+                   .HasColumnName("DISPONIVEL")
+                   .HasConversion(
+                        v => v ? "Y" : "N",
+                        v => v == "Y");
+        
 
             builder.Property(a => a.LocalizacaoId)
-                   .HasColumnName("tbl_localizacao_id_localizacao")
+                   .HasColumnName("TBL_LOCALIZACAO_ID_LOCALIZACAO")
                    .IsRequired();
 
             builder.HasOne(a => a.Localizacao)
