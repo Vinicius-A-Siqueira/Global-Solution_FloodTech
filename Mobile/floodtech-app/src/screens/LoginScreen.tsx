@@ -67,13 +67,23 @@ const LoginScreen = () => {
 
             if (response.ok) {
                 const data = await response.json();
-                const userId = data.id_usuario;
-                let userType = data.tipoUsuario as TipoUsuario;
-                
+
+                if (!Array.isArray(data) || data.length === 0) {
+                    Alert.alert('Erro inesperado', 'Nenhum dado de usuário retornado pela API');
+                    console.error('Resposta da API:', data);
+                    return;
+                }
+
+                const user = data[0];
+
+                const userId = user.id;
+                let userType = user.tipoUsuario.toLowerCase() as TipoUsuario;
+
                 if (!['cidadão', 'operador', 'admin'].includes(userType)) {
                     userType = 'cidadao';
-                    console.warn('Tipo de usuário inválido recebido da API:', data.tipo_usuario);
+                    console.warn('Tipo de usuário inválido recebido da API:', user.tipoUsuario);
                 }
+
 
                 console.log("Login bem-sucedido. Tipo de usuário:", userType);
                 await login(userId, userType);
@@ -82,6 +92,7 @@ const LoginScreen = () => {
             } else {
                 Alert.alert('Erro ao logar', 'Credenciais inválidas');
             }
+
         } catch (error) {
             console.error('Erro de login:', error);
             Alert.alert('Erro de rede', 'Não foi possível conectar ao servidor');

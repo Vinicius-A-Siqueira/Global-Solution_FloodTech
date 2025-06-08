@@ -1,4 +1,3 @@
-// src/main/java/com/example/floodtech/config/OpenApiConfig.java
 package com.example.floodtech.config;
 
 import io.swagger.v3.oas.models.*;

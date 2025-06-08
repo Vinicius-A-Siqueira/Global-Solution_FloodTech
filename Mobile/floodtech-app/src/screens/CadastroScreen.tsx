@@ -19,7 +19,7 @@ const CadastroScreen = () => {
     const [endereco, setEndereco] = useState('');
     const [telefonePessoal, setTelefonePessoal] = useState('');
     const [telefoneEmergencia, setTelefoneEmergencia] = useState('');
-    const [tipoUsuario, setTipoUsuario] = useState('cidadao'); // Novo estado
+    const [tipoUsuario, setTipoUsuario] = useState('cidadao');
 
     const handleCadastro = async () => {
         try {
@@ -30,7 +30,7 @@ const CadastroScreen = () => {
                 body: JSON.stringify({
                     email,
                     senha,
-                    tipoUsuario  // <-- camelCase
+                    tipoUsuario
                 })
             });
 
@@ -45,7 +45,7 @@ const CadastroScreen = () => {
 }
 
             const usuario = await usuarioRes.json();
-            const id_usuario = usuario.id;  // correto
+            const id_usuario = usuario.id;
 
             const perfilRes = await fetch('http://10.3.73.30:8080/api/perfis', {
                 method: 'POST',
@@ -178,11 +178,12 @@ const styles = StyleSheet.create({
         marginBottom: 12
     },
     button: {
-        backgroundColor: '#32CD32',
-        padding: 14,
-        borderRadius: 8,
-        alignItems: 'center',
-        marginVertical: 12
+    backgroundColor: '#32CD32',
+    padding: 14,
+    borderRadius: 8,
+    alignItems: 'center',
+    marginVertical: 12,
+    cursor: 'pointer' 
     },
     buttonText: {
         color: '#fff',

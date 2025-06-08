@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/login")
-@CrossOrigin(origins = "*") // Permite requisições do app React Native
+@CrossOrigin(origins = "*")
 public class LoginController {
 
     @Autowired
@@ -22,7 +22,6 @@ public class LoginController {
             return ResponseEntity.status(401).body("Credenciais inválidas");
         }
 
-        // Opcional: remova a senha antes de retornar
         usuario.setSenha(null);
         return ResponseEntity.ok(usuario);
     }
