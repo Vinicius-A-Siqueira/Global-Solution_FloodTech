@@ -16,13 +16,3 @@
 3. Configure sua rede WiFi e credenciais ThingSpeak.
 4. Faça upload para o ESP32 ou rode no Wokwi.
 5. Acesse o painel ThingSpeak para visualizar dados em tempo real.
-
-## 📡 Comunicação
-- Protocolo: MQTT
-- Payload JSON:
-```json
-{
-  "umidade": 65,
-  "chuva": true,
-  "nivel_agua_cm": 22.3
-}
