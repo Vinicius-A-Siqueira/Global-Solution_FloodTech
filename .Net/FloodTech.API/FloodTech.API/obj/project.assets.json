@@ -3176,6 +3176,7 @@
       "FluentValidation.AspNetCore >= 11.3.1",
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 8.0.4",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.20.1",
+      "Oracle.EntityFrameworkCore >= 9.23.80",
       "Swashbuckle.AspNetCore >= 8.1.4"
     ]
   },
@@ -3251,6 +3252,10 @@
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
             "target": "Package",
             "version": "[1.20.1, )"
+          },
+          "Oracle.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[9.23.80, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

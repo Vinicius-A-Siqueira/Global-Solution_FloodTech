@@ -13,7 +13,7 @@ namespace FloodTech.Infrastructure.Configurations
     {
         public void Configure(EntityTypeBuilder<Abrigo> builder)
         {
-            builder.ToTable("TBL_ABRIGO", "RM551939");
+            builder.ToTable("TBL_ABRIGO");
 
             builder.HasKey(a => a.Id);
 
@@ -35,7 +35,7 @@ namespace FloodTech.Infrastructure.Configurations
                    .HasConversion(
                         v => v ? "Y" : "N",
                         v => v == "Y");
-        
+
 
             builder.Property(a => a.LocalizacaoId)
                    .HasColumnName("TBL_LOCALIZACAO_ID_LOCALIZACAO")

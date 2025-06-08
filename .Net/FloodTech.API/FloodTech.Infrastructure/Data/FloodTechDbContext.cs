@@ -25,7 +25,7 @@ namespace FloodTech.Infrastructure.Data
         {
             base.OnModelCreating(modelBuilder);
        
-        modelBuilder.HasDefaultSchema("RM551939");
+        modelBuilder.HasDefaultSchema("RM557879");
 
             
        

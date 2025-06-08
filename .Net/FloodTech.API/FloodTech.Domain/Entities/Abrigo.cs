@@ -7,7 +7,7 @@
 
     namespace FloodTech.Domain.Entities
     {
-        [Table("TBL_ABRIGO", Schema = "RM551939")]
+        [Table("TBL_ABRIGO")]
         public class Abrigo : BaseEntity
         {
             [Column("NOME")]
@@ -24,8 +24,6 @@
 
             [ForeignKey("LocalizacaoId")]
             public virtual Localizacao Localizacao { get; set; }
-
-        public Abrigo() { }
 
             public Abrigo(
                 string nome,

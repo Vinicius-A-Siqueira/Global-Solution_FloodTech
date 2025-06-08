@@ -13,16 +13,12 @@ namespace FloodTech.Application.Mappings
     {
         public AutoMapperProfile()
         {
-            // Localização
             CreateMap<Localizacao, LocalizacaoDto>().ReverseMap();
 
-            // Abrigo
             CreateMap<Abrigo, AbrigoDto>().ReverseMap();
 
-            // Sensor IoT
             CreateMap<SensorIot, SensorIotDto>().ReverseMap();
 
-            // Rota Segura
             CreateMap<RotaSegura, RotaSeguraDto>().ReverseMap();
         }
     }

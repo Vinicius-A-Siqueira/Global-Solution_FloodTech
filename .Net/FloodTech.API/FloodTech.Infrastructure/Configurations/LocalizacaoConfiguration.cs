@@ -51,7 +51,6 @@ namespace FloodTech.Infrastructure.Configurations
                    .HasMaxLength(10)
                    .IsRequired();
 
-            // Relacionamento 1:N com Abrigos e SensorsIoT via navegação
             builder.HasMany(l => l.Abrigos)
                    .WithOne(a => a.Localizacao)
                    .HasForeignKey(a => a.LocalizacaoId)
@@ -62,7 +61,6 @@ namespace FloodTech.Infrastructure.Configurations
                    .HasForeignKey(s => s.LocalizacaoId)
                    .OnDelete(DeleteBehavior.Restrict);
 
-            // Para rota segura, as relações são feitas nas configurações da RotaSegura
         }
     }
 }
