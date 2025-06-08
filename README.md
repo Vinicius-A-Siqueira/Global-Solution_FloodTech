@@ -12,8 +12,8 @@
 
 ## 🎥 Vídeos do Projeto
 
-- Demonstração Mobile: [Assista aqui](https://youtu.be/vG1_vIEJ9tM?si=fHHQsQss1rRH2CLy)  
 - Pitch do Projeto: [Assista aqui](https://youtu.be/-g2nAuaVbzM?si=tE73YpLhvrAsqNo0)
+- Demonstração Mobile: [Assista aqui](https://youtu.be/vG1_vIEJ9tM?si=fHHQsQss1rRH2CLy)  
 - Demonstração Java: [Assista aqui](https://youtu.be/DK0WamjGIAQ?si=wWnbSbEBuRYcsmaA)
 - Demonstração Banco de dados: [Assista aqui](https://youtu.be/ginwCYw11G0?si=43MKCkR-ncAhtGs5)
 ---
