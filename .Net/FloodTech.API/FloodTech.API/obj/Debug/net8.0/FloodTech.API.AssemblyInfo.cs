@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FloodTech.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+22d62c50c09c9ff847aa4be92005a3ac94f82481")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+84552b40bcca7e1b93417d5e3d15a51d99a6aac7")]
 [assembly: System.Reflection.AssemblyProductAttribute("FloodTech.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FloodTech.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

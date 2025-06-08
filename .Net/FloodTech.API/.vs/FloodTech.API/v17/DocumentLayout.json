@@ -28,7 +28,7 @@
               "RelativeDocumentMoniker": "FloodTech.API\\Properties\\launchSettings.json",
               "ToolTip": "C:\\Users\\Vin\u00EDciusSiqueira\\Downloads\\Vinicius\\Global-Solution_FloodTech\\.Net\\FloodTech.API\\FloodTech.API\\Properties\\launchSettings.json",
               "RelativeToolTip": "FloodTech.API\\Properties\\launchSettings.json",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABMAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-06-08T22:24:41.382Z",
               "EditorCaption": ""
@@ -43,8 +43,7 @@
               "RelativeToolTip": "FloodTech.Infrastructure\\Settings\\OracleSettings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T22:22:57.963Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-08T22:22:57.963Z"
             }
           ]
         }
