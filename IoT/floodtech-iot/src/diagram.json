@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "author": "FloodTech IoT",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": { "env": "internet" }
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "aguaSensor",
+      "top": -100,
+      "left": -150
+    },
+    {
+      "type": "wokwi-soil-moisture-sensor",
+      "id": "umidadeSensor",
+      "top": 80,
+      "left": -150
+    },
+    {
+      "type": "wokwi-pir-motion-sensor",
+      "id": "chuvaSensor",
+      "top": -60,
+      "left": 180
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "buzzer",
+      "top": 120,
+      "left": 100
+    }
+  ],
+  "connections": [
+    ["aguaSensor:TRIG", "esp:5", "green", ["v0"]],
+    ["aguaSensor:ECHO", "esp:18", "blue", ["v0"]],
+    ["umidadeSensor:AO", "esp:34", "orange", ["v0"]],
+    ["chuvaSensor:DOUT", "esp:35", "purple", ["v0"]],
+    ["buzzer:1", "esp:21", "red", ["v0"]],
+    ["buzzer:2", "esp:GND", "black", ["v0"]],
+    ["aguaSensor:VCC", "esp:3V3", "red", ["v0"]],
+    ["aguaSensor:GND", "esp:GND", "black", ["v0"]],
+    ["umidadeSensor:VCC", "esp:3V3", "red", ["v0"]],
+    ["umidadeSensor:GND", "esp:GND", "black", ["v0"]],
+    ["chuvaSensor:VCC", "esp:3V3", "red", ["v0"]],
+    ["chuvaSensor:GND", "esp:GND", "black", ["v0"]]
+  ]
+}

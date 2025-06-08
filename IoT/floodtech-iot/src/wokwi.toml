@@ -1,0 +1,9 @@
+[wokwi]
+name = "FloodTech IoT"
+description = "Projeto ESP32 para monitoramento de enchentes"
+author = "Vinícius Siqueira"
+version = "0.1.0"
+platform = "esp32dev"
+
+firmware = ".pio/build/esp32dev/firmware.bin"
+elf = ".pio/build/esp32dev/firmware.elf"
