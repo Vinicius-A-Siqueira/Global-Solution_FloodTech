@@ -50,7 +50,7 @@ dotnet run --project FloodTech.API
 
 4. **Acesse o Swagger**
 ```
-http://localhost:5000/swagger
+http://localhost:7203/swagger
 ```
 
 ---
