@@ -13,15 +13,15 @@ const char* mqttTopic = "channels/2984045/publish/1C810GXR5BPPA6OV";
 WiFiClient espClient;
 PubSubClient client(espClient);
 
-const int trigPin = 5;       
-const int echoPin = 18;       
+const int trigPin = 5;      
+const int echoPin = 18;    
 const int umidadePin = 34;    
 const int chuvaPin = 35;      
-const int buzzerPin = 21;     
+const int buzzerPin = 21;
 
-const float limiteAgua = 25.0;    
-const int limiteUmidade = 70;     
-const bool alertaChuva = true;      
+const float limiteAgua = 25.0;
+const int limiteUmidade = 70;
+const bool alertaChuva = true;
 
 void setup() {
   Serial.begin(115200);
@@ -53,7 +53,7 @@ void loop() {
   // === LEITURA DOS SENSORES ===
   float nivelAgua = medirDistanciaCM();
   int umidadeBruta = analogRead(umidadePin);
-  int umidadePorcento = map(umidadeBruta, 4095, 0, 0, 100); // inverso: solo seco = valor alto
+  int umidadePorcento = map(umidadeBruta, 4095, 0, 0, 100); 
   bool chuvaDetectada = digitalRead(chuvaPin) == LOW;
 
   // === EXIBE NO MONITOR SERIAL ===
