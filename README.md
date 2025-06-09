@@ -18,6 +18,7 @@
 - Demonstração Banco de dados: [Assista aqui](https://youtu.be/ginwCYw11G0?si=43MKCkR-ncAhtGs5)
 - Demonstração .Net: [Assista aqui](https://youtu.be/8afP2jNZ5a0?si=QX9f6OUyEQvtcppF)
 - Demonstração IoT: [Assista aqui](https://youtu.be/h4plb3gD7wM?si=CHgtjdpsO2PA-wY0)
+- Demonstração Devops: [Assista aqui](https://youtu.be/2FGC28Tupp4?si=K1ByvAURs3UCE_uF)
 ---
 
 # 🌊 FLOODTECH — Plataforma Inteligente de Gestão de Enchentes Urbanas
